@@ -44,24 +44,6 @@ function App() {
       ]
     },
     {
-      title: 'Electronic Engineer',
-      company: 'PKM KC - Monitoring Watch Cardiovascular',
-      date: 'Februari 2023 - Desember 2023',
-      duties: [
-        'Desain PCB dengan KiCAD 8.0 dan pengujian sensor detak jantung',
-        'Merancang prototipe wearable kesehatan untuk penderita kardiovaskular',
-      ]
-    },
-    {
-      title: 'Researcher',
-      company: 'PKM VGK - Edgytech Flathouse',
-      date: 'Februari 2023 - Desember 2023',
-      duties: [
-        'Merancang sistem monitoring energi terbarukan untuk rumah susun',
-        'Meneliti pemanfaatan energi alternatif pada hunian vertikal ramah lingkungan',
-      ]
-    },
-    {
       title: 'Network Engineer',
       company: 'PT Asatama Teknologi Terpadu',
       date: 'Oktober 2021 - Desember 2021',
