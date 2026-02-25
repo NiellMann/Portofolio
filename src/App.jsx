@@ -179,7 +179,7 @@ function App() {
     { title: 'Juara 1 Divisi Technology Development', event: 'KRTI (Kontes Robot Terbang Indonesia)' },
     { title: 'Juara Harapan 1 SoTech', event: 'PT Pertamina Patra Niaga' },
     { title: 'Juara 2 Astranauts 2024', event: 'PT Astra Digital Internasional' },
-    { title: 'Finalis PIMNAS', event: 'KEMENDIKBUDRISTEK' },
+    { title: 'Finalis PIMNAS 36', event: 'KEMENDIKBUDRISTEK' },
   ]
 
   const education = [
