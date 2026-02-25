@@ -51,8 +51,7 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Daniel, a developer based in Indonesia, Yogyakarta with a passion for
-              code.
+              Hi, I'm Daniel, a Backend Developer based in Indonesia, Yogyakarta with a passion for building scalable systems.
             </p>
 
             <Button

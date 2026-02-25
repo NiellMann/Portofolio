@@ -91,7 +91,7 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
+    name: "Go Developer",
     imgPath: "/images/logos/react.png",
   },
   {
@@ -99,15 +99,15 @@ const techStackImgs = [
     imgPath: "/images/logos/python.svg",
   },
   {
-    name: "Backend Developer",
+    name: "JavaScript Developer",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
+    name: "PostgreSQL",
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
+    name: "Docker",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -147,39 +147,41 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Daniel has been an invaluable backend developer, building scalable microservices and robust APIs. His expertise in Go and Python has significantly improved our system performance.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Backend Developer",
+    date: "August 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed and maintained backend services using Go and Python.",
+      "Built scalable RESTful APIs and microservices architecture.",
+      "Implemented CI/CD pipelines and containerized applications with Docker.",
+      "Worked with PostgreSQL, MongoDB, and Redis for data management.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Daniel delivered high-quality full-stack solutions for various clients. His ability to handle both frontend and backend tasks made him a valuable asset.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    date: "January 2022 - August 2023",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Built web applications using JavaScript, Python, and various frameworks.",
+      "Designed and managed databases with PostgreSQL and MongoDB.",
+      "Deployed applications to AWS and GCP cloud platforms.",
+      "Collaborated with clients to deliver tailored solutions.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "Daniel demonstrated strong web development skills during his internship, quickly learning new technologies and contributing to team projects.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Web Developer Intern",
+    date: "November 2021 - January 2022",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Assisted in building responsive web pages and features.",
+      "Learned modern web development technologies.",
+      "Participated in code reviews and team meetings.",
     ],
   },
 ];
@@ -201,46 +203,46 @@ const expLogos = [
 
 const testimonials = [
   {
+    name: "Comparative Analysis of ICT and Digital Literacy in Libraries",
+    mentions: "Jurnal Documentation & Information",
+    review:
+      "Published research on the comparative analysis of Information and Communication Technology (ICT) use and digital literacy in libraries, focusing on academic libraries in Jakarta.",
+    imgPath: "/images/client1.png",
+  },
+  {
+    name: "Knowledge Management & Digital Literacy in University Libraries",
+    mentions: "Jurnal Documentation & Information",
+    review:
+      "Research on knowledge management and digital literacy in university libraries, exploring strategies for effective knowledge sharing and digital literacy development.",
+    imgPath: "/images/client3.png",
+  },
+  {
+    name: "Sistem Informasi Manajemen Koki (HKI)",
+    mentions: "Hak Kekayaan Intelektual",
+    review:
+      "Creator of 'Sistem Informasi Manajemen Koki' - a Chef Management Information System registered with Indonesian Intellectual Property (HKI) with certificate number: 000348687.",
+    imgPath: "/images/client2.png",
+  },
+  {
     name: "Esther Howard",
     mentions: "@estherhoward",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "I can't say enough good things about Daniel. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
     imgPath: "/images/client1.png",
   },
   {
     name: "Wade Warren",
     mentions: "@wadewarren",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Working with Daniel was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
     imgPath: "/images/client3.png",
   },
   {
     name: "Guy Hawkins",
     mentions: "@guyhawkins",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Daniel was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project.",
     imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
   },
 ];
 
