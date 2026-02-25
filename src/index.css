@@ -493,12 +493,14 @@ main {
 .contact-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 16px;
 }
 
 .contact-item {
   display: flex;
   flex-direction: column;
+  min-width: 150px;
 }
 
 .contact-item strong {

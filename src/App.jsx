@@ -206,6 +206,38 @@ function App() {
     { label: 'GitHub', value: 'github.com/NiellMann', link: 'https://github.com/NiellMann' },
   ]
 
+  const organizations = [
+    {
+      title: 'Koordinator Media',
+      organization: 'PMK Sekolah Vokasi',
+      date: 'Februari 2023 - Februari 2024',
+    },
+    {
+      title: 'Media Staff',
+      organization: 'UKK (Unit Kerohanian Kristen)',
+      date: 'Februari 2023 - Februari 2024',
+    },
+    {
+      title: 'Koordinator Media',
+      organization: 'Dialog Lintas Agama UGM',
+      date: 'Agustus 2023 - Oktober 2023',
+    },
+    {
+      title: 'IT Staff',
+      organization: 'Gelanggang Expo & UKK CUP',
+      date: 'Mei 2023 - Agustus 2023',
+    },
+    {
+      title: 'Humas & IT',
+      organization: 'UKK CUP',
+      date: 'September 2022 - November 2023',
+    },
+  ]
+
+  const colors = ['#58a6ff', '#3fb950', '#f85149', '#d29922', '#a371f7', '#f778ba', '#79c0ff', '#7ee787']
+  
+  const getColor = (index) => colors[index % colors.length]
+
   const filterItems = (items, keys) => {
     if (!search) return items
     const q = search.toLowerCase()
@@ -220,6 +252,7 @@ function App() {
   const filteredProjects = filterItems(projects, ['title', 'description', 'tech', 'event'])
   const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
   const filteredNews = filterItems(news, ['title', 'source', 'year'])
+  const filteredOrganizations = filterItems(organizations, ['title', 'organization', 'date'])
 
   return (
     <>
@@ -378,7 +411,7 @@ function App() {
                 <p className="repo-description">{proj.desc}</p>
                 <div className="repo-stats">
                   {proj.tech.map((t, j) => (
-                    <span key={j}><span className="language-color" style={{ background: '#58a6ff' }}></span> {t}</span>
+                    <span key={j}><span className="language-color" style={{ background: getColor(j) }}></span> {t}</span>
                   ))}
                 </div>
               </div>
@@ -464,6 +497,28 @@ function App() {
                   <a href={c.link} target="_blank">{c.value}</a>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Organizations */}
+        <section style={{ marginTop: '32px' }}>
+          <div className="contact-section">
+            <h2>
+              <svg height="20" viewBox="0 0 16 16" width="20"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path></svg>
+              Organizations
+            </h2>
+            <div className="item-list">
+              {filteredOrganizations.map((org, i) => (
+                <div key={i} className="item-card">
+                  <h3>{org.title}</h3>
+                  <p className="category">{org.organization}</p>
+                  <p className="meta">{org.date}</p>
+                </div>
+              ))}
+              {filteredOrganizations.length === 0 && search && (
+                <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+              )}
             </div>
           </div>
         </section>
