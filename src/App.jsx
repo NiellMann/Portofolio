@@ -117,6 +117,7 @@ function App() {
       date: 'Oktober 2023',
       pages: 'Nomor Pencatatan: 000535480',
       doi: 'EC002023102525',
+      pdf: '/referensi/HKI Aplikasi.pdf',
       role: 'Pencipta (Co-Author)'
     },
     {
@@ -124,7 +125,8 @@ function App() {
       journal: 'Jurnal Kolaboratif Sains, Volume 8 No. 11',
       date: 'November 2025',
       pages: '6640-6653',
-      doi: '10.56338/jks.v8i11.8560',
+      doi: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560',
+      pdf: '/referensi/8560-Article Text-40892-2-10-20251110.pdf',
       role: 'Co-Author'
     },
     {
@@ -133,7 +135,33 @@ function App() {
       date: 'Mei 2026',
       pages: '24-36',
       doi: 'https://doi.org/10.59725/de.v33i1.386',
+      pdf: '/referensi/DE+VOL.33+NO+1+2026+HAL+24-36.pdf',
       role: 'Co-Author'
+    },
+  ]
+
+  const gallery = [
+    {
+      event: 'Kontes Robot Terbang Indonesia (KRTI)',
+      photos: [
+        '/assets_foto/Kontes Robot Terbang Indonesia (KRTI)/IMG-20241228-WA0068.jpg',
+        '/assets_foto/Kontes Robot Terbang Indonesia (KRTI)/IMG-20241228-WA0065.jpg',
+      ]
+    },
+    {
+      event: 'Mine-Eye Gama - Astra Internasional',
+      photos: [
+        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0047.jpg',
+        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0046.jpg',
+        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0045.jpg',
+        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0044.jpg',
+      ]
+    },
+    {
+      event: 'SoTech - Pertamina Patra Niaga',
+      photos: [
+        '/assets_foto/SoTech/IMG-20241228-WA0029.jpg',
+      ]
     },
   ]
 
@@ -195,7 +223,7 @@ function App() {
     <>
       {/* Header */}
       <header>
-        <div className="logo">DANIEL<span>.ID</span></div>
+        <div className="logo">DANIEL IMANUEL MANAFE</div>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -203,6 +231,7 @@ function App() {
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -380,10 +409,35 @@ function App() {
               <h3>{pub.title}</h3>
               <p className="journal">{pub.journal}</p>
               <p className="meta">{pub.date} | {pub.role}</p>
-              <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-link">View Publication</a>
+              <div className="pub-links">
+                <a href={pub.pdf} target="_blank" rel="noopener noreferrer" className="pub-link">View PDF</a>
+                {pub.doi.includes('http') && (
+                  <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-link">Journal Link</a>
+                )}
+              </div>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="gallery">
+        <div className="section-title">
+          <h2>Gallery</h2>
+          <div className="line"></div>
+        </div>
+        {gallery.map((item, index) => (
+          <div key={index} className="gallery-event">
+            <h3>{item.event}</h3>
+            <div className="gallery-grid">
+              {item.photos.map((photo, i) => (
+                <div key={i} className="gallery-item">
+                  <img src={photo} alt={`${item.event} - ${i + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       {/* Awards */}
