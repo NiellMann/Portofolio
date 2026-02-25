@@ -513,38 +513,40 @@ main {
   font-size: 13px;
 }
 
-/* Milestone Timeline - Horizontal Bar Graph Style */
+/* Milestone - Simple Tags Style */
 .milestone-timeline {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .milestone-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 10px;
-  min-width: auto;
-  width: auto;
+  gap: 4px;
+  padding: 3px 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  font-size: 9px;
+  white-space: nowrap;
 }
 
 .milestone-year {
-  font-weight: 700;
-  color: var(--text-secondary);
-  min-width: 32px;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .milestone-dot {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  flex-shrink: 0;
+}
+
+.milestone-content {
+  color: var(--text-secondary);
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .milestone-education .milestone-dot { background: #58a6ff; }
@@ -554,22 +556,9 @@ main {
 .milestone-award .milestone-dot { background: #f85149; }
 .milestone-publication .milestone-dot { background: #79c0ff; }
 
-.milestone-content {
-  flex: 1;
-  overflow: hidden;
-}
-
 .milestone-content p {
-  font-size: 11px;
-  color: var(--text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin: 0;
-}
-
-.milestone-type-badge {
-  display: none;
+  font-size: 9px;
 }
 
 /* Footer */
