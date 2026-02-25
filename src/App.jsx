@@ -137,27 +137,57 @@ function App() {
     },
   ]
 
-  const gallery = [
+  const news = [
     {
-      event: 'Kontes Robot Terbang Indonesia (KRTI)',
-      photos: [
-        '/assets_foto/Kontes Robot Terbang Indonesia (KRTI)/IMG-20241228-WA0068.jpg',
-        '/assets_foto/Kontes Robot Terbang Indonesia (KRTI)/IMG-20241228-WA0065.jpg',
+      title: 'Belajar Robotika Menggunakan Simulator Webots',
+      category: 'Buku / Publikasi Akademik',
+      links: [
+        { text: 'Katalog Buku (RStats Bookstore)', url: 'https://www.rstatsbookstore.com/katalog/katalog-2025' },
+        { text: 'Profil Buku (SINTA)', url: 'https://sinta.kemdiktisaintek.go.id/authors/profile/44568/?view=books' },
       ]
     },
     {
-      event: 'Mine-Eye Gama - Astra Internasional',
-      photos: [
-        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0047.jpg',
-        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0046.jpg',
-        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0045.jpg',
-        '/assets_foto/Mine-Eye Gama Astra Internasional/IMG-20241228-WA0044.jpg',
+      title: 'Mine-Eye Gama - Astranauts 2024',
+      category: 'Prestasi Lomba',
+      links: [
+        { text: 'UGM News', url: 'https://ugm.ac.id/en/news/mine-eye-gama-team-wins-2nd-place-in-astranauts-2024/' },
+        { text: 'Biologi UGM', url: 'https://biologi.ugm.ac.id/en/2024/12/02/ugms-mine-eye-gama-team-wins-second-place-at-astranauts-2024-with-mining-monitoring-technology-innovation/' },
       ]
     },
     {
-      event: 'SoTech - Pertamina Patra Niaga',
-      photos: [
-        '/assets_foto/SoTech/IMG-20241228-WA0029.jpg',
+      title: 'My Heavy Equipment - IoT Application',
+      category: 'Inovasi Mahasiswa',
+      links: [
+        { text: 'UGM News', url: 'https://ugm.ac.id/en/news/ugm-students-develop-iot-integrated-heavy-equipment-service-history-recording-application/' },
+      ]
+    },
+    {
+      title: 'KRTI - Kontes Robot Terbang Indonesia',
+      category: 'Prestasi Lomba Nasional',
+      links: [
+        { text: 'DTEDI SV UGM', url: 'https://tedi.sv.ugm.ac.id/id/2025/10/27/mahasiswa-dtedi-sekolah-vokasi-ugm-berprestasi-di-ajang-kontes-robot-terbang-indonesia-krti-2025/' },
+      ]
+    },
+    {
+      title: 'SoTech / Pertamina Sumatera Selatan',
+      category: 'Prestasi Kompetisi',
+      links: [
+        { text: 'TRIK UGM', url: 'https://trik.sv.ugm.ac.id/2024/04/26/mahasiswa-trik-ugm-lolos-12-besar-kompetisi-pertamina-sumatera-selatan/' },
+      ]
+    },
+    {
+      title: 'Edgytech Flathouse',
+      category: 'Inovasi Mahasiswa',
+      links: [
+        { text: 'UGM News', url: 'https://ugm.ac.id/id/berita/edgytech-flathouse-inovasi-untuk-optimalisasi-potensi-energi-rumah-susun/' },
+      ]
+    },
+    {
+      title: 'Profil Akademik & Publikasi',
+      category: 'Profil Ilmiah',
+      links: [
+        { text: 'LLDIKTI Author', url: 'https://diajeng.lldikti6.id/authors/discover/Daniel+Imanuel+Manafe' },
+        { text: 'ResearchGate Lab', url: 'https://www.researchgate.net/lab/Daniel-Imanuel-Manafe-Lab' },
       ]
     },
   ]
@@ -228,7 +258,7 @@ function App() {
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#publications">Publications</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -419,24 +449,27 @@ function App() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="gallery" className="gallery">
+      {/* News */}
+      <section id="news" className="news">
         <div className="section-title">
-          <h2>Gallery</h2>
+          <h2>News & Publications</h2>
           <div className="line"></div>
         </div>
-        {gallery.map((item, index) => (
-          <div key={index} className="gallery-event">
-            <h3>{item.event}</h3>
-            <div className="gallery-grid">
-              {item.photos.map((photo, i) => (
-                <div key={i} className="gallery-item">
-                  <img src={photo} alt={`${item.event} - ${i + 1}`} />
-                </div>
-              ))}
+        <div className="news-list">
+          {news.map((item, index) => (
+            <div key={index} className="news-item">
+              <h3>{item.title}</h3>
+              <p className="news-category">{item.category}</p>
+              <div className="news-links">
+                {item.links.map((link, i) => (
+                  <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="news-link">
+                    {link.text}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       {/* Awards */}
