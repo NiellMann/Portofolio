@@ -5,7 +5,7 @@ function App() {
     {
       title: 'Head of Khageswara Technology Development',
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
-      date: 'Desember 2024 - Sekarang',
+      date: 'Desember 2024 - Desember 2025',
       duties: [
         'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL Tailsitter',
         'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
