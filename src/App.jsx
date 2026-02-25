@@ -83,6 +83,23 @@ function App() {
 
   const projects = [
     {
+      title: 'OTS Petrokimia Gresik - PKG',
+      desc: 'Operator Training Simulator (OTS) adalah sistem simulasi untuk melatih operator dalam mengoperasikan proses produksi Asam Phosfat. Dibuat menggunakan HMI dengan antarmuka yang realistis.',
+      tech: ['OTS', 'HMI', 'Asam Phosfat', 'Industrial Automation'],
+      link: ''
+    },
+    {
+      title: 'OTS Pupuk Kujang - PKC',
+      desc: 'Operator Training Simulator (OTS) adalah sistem simulasi untuk melatih operator dalam mengoperasikan proses produksi Ammonia. Dibuat menggunakan HMI dengan antarmuka yang realistis.',
+      tech: ['OTS', 'HMI', 'Ammonia', 'Industrial Automation'],
+      link: ''
+    },
+    {
+      title: 'VTOL UAV Hybrid Quadcopter',
+      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter untuk kompetisi KRTI.',
+      tech: ['VTOL', 'UAV', 'Flight Control']
+    },
+    {
       title: 'Urban Portable Agriculture (UPA) Berbasis IoT',
       desc: 'Sistem pertanian hidroponik vertikal berbasis IoT dengan sensor pH dan kekeruhan, kontrol LED otomatis, dan dashboard real-time. Validasi teknis menunjukkan akurasi sensor pH ±0.1.',
       tech: ['ESP32', 'IoT', 'Sensor pH', 'DBSCAN'],
@@ -103,16 +120,6 @@ function App() {
       title: 'Edgytech Flathouse - PKM VGK',
       desc: 'Sistem monitoring energi terbarukan untuk rumah susun dengan penelitian pemanfaatan energi alternatif pada hunian vertikal ramah lingkungan.',
       tech: ['Renewable Energy', 'Smart Grid', 'Monitoring']
-    },
-    {
-      title: 'VTOL UAV Hybrid Quadcopter',
-      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter untuk kompetisi KRTI.',
-      tech: ['VTOL', 'UAV', 'Flight Control']
-    },
-    {
-      title: 'HMI Industrial Process',
-      desc: 'Human Machine Interface untuk proses produksi Asam Phosfat dan Ammonia di PT Petrokimia dan Pupuk Kujang.',
-      tech: ['HMI', 'Industrial Automation', 'SCADA']
     },
   ]
 
