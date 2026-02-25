@@ -3,13 +3,13 @@ import React from 'react'
 function App() {
   const experience = [
     {
-      title: 'Head of Khageswara Division',
+      title: 'Head of Khageswara Technology Development',
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
       date: 'Desember 2024 - Sekarang',
       duties: [
         'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL Tailsitter',
-        'Mengatur integrasi mekatronika dan jadwal teknis tim divisi',
-        'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi',
+        'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
+        'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
       ]
     },
     {
@@ -66,6 +66,16 @@ function App() {
       duties: [
         'Troubleshooting perangkat, topologi jaringan, instalasi dan konfigurasi Mikrotik',
         'Mendukung operasional jaringan dan perangkat di bidang layanan IT dan komunikasi',
+      ]
+    },
+    {
+      title: 'Production Helper',
+      company: 'PT Prakarsa Alam Segar (Mie Sedaap)',
+      date: 'Juli 2021 - Oktober 2021',
+      duties: [
+        'Menyiapkan instalasi, konfigurasi dan penyesuaian ke produksi mesin di line conditioning 2 produk mie kering',
+        'Setup dan pengecekan wiring panel dan mesin produksi',
+        'Membantu memastikan kesiapan mesin produksi mie instan di jalur utama',
       ]
     },
   ]
@@ -218,7 +228,7 @@ function App() {
   const awards = [
     { title: 'Juara 1 Divisi Technology Development', event: 'KRTI (Kontes Robot Terbang Indonesia)' },
     { title: 'Juara 2 Astranauts 2024', event: 'PT Astra Digital Internasional' },
-    { title: 'Juara 1 SoTech', event: 'PT Pertamina Patra Niaga' },
+    { title: 'Juara Harapan 1 SoTech', event: 'PT Pertamina Patra Niaga' },
     { title: 'Finalis PIMNAS (PKM-KC & PKM-VGK)', event: 'KEMENDIKBUDRISTEK' },
     { title: 'Awardee Astra InnovLab Batch 3', event: 'Astra' },
   ]
