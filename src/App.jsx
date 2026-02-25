@@ -3,21 +3,6 @@ import React, { useState } from 'react'
 function App() {
   const [search, setSearch] = useState('')
   
-  const filterItems = (items, keys) => {
-    if (!search) return items
-    const q = search.toLowerCase()
-    return items.filter(item => keys.some(key => {
-      const val = item[key]
-      if (Array.isArray(val)) return val.some(v => String(v).toLowerCase().includes(q))
-      return String(val).toLowerCase().includes(q)
-    }))
-  }
-  
-  const filteredExperience = filterItems(experience, ['title', 'company', 'date', 'duties'])
-  const filteredProjects = filterItems(projects, ['title', 'description', 'tech', 'event'])
-  const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
-  const filteredNews = filterItems(news, ['title', 'source', 'year'])
-  
   const experience = [
     {
       title: 'Head of Khageswara Technology Development',
@@ -220,6 +205,21 @@ function App() {
     { label: 'LinkedIn', value: 'bit.ly/Niell_LinkedIn', link: 'https://bit.ly/Niell_LinkedIn' },
     { label: 'GitHub', value: 'github.com/NiellMann', link: 'https://github.com/NiellMann' },
   ]
+
+  const filterItems = (items, keys) => {
+    if (!search) return items
+    const q = search.toLowerCase()
+    return items.filter(item => keys.some(key => {
+      const val = item[key]
+      if (Array.isArray(val)) return val.some(v => String(v).toLowerCase().includes(q))
+      return String(val).toLowerCase().includes(q)
+    }))
+  }
+
+  const filteredExperience = filterItems(experience, ['title', 'company', 'date', 'duties'])
+  const filteredProjects = filterItems(projects, ['title', 'description', 'tech', 'event'])
+  const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
+  const filteredNews = filterItems(news, ['title', 'source', 'year'])
 
   return (
     <>
