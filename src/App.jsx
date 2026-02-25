@@ -252,7 +252,7 @@ function App() {
       <main>
         {/* Profile Header */}
         <div className="profile-header">
-          <img src="/assets_foto/logo/IMG-20241228-WA0022.jpg" alt="Profile" className="profile-avatar" />
+          <img src="/Portofolio/assets_foto/logo/IMG-20241228-WA0022.jpg" alt="Profile" className="profile-avatar" />
           <div className="profile-info">
             <h1>Daniel Imanuel Manafe</h1>
             <p className="username">Automation & Instrumentation Engineer</p>
