@@ -1,7 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 function App() {
   const [search, setSearch] = useState('')
+  const [scrolled, setScrolled] = useState(false)
+  const sectionRefs = useRef([])
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in')
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+    
+    sectionRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref)
+    })
+    
+    return () => observer.disconnect()
+  }, [])
   
   const experience = [
     {
@@ -19,7 +48,7 @@ function App() {
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
       date: 'Desember 2024 - Desember 2025',
       duties: [
-        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter',
+        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL Plane Quadcopter',
         'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
         'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
       ]
@@ -77,8 +106,8 @@ function App() {
       link: ''
     },
     {
-      title: 'VTOL UAV Hybrid Quadcopter',
-      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter untuk kompetisi KRTI.',
+      title: 'VTOL Plane Quadcopter',
+      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL Plane Quadcopter untuk kompetisi KRTI.',
       tech: ['VTOL', 'UAV', 'Flight Control']
     },
     {
@@ -161,8 +190,8 @@ function App() {
   ]
 
   const skills = {
-    hard: ['C/C++', 'Python', 'MATLAB', 'Arduino', 'ESP32', 'STM32', 'SolidWorks', 'KiCAD', 'CX Programmer'],
-    software: ['Aveva Intouch', 'Labview', 'Figma', 'Microsoft Office'],
+    hard: ['AVEVA Intouch', 'KiCAD', 'Fusion360', 'Arduino', 'ESP32', 'MATLAB', 'Python', 'C/C++', 'Figma'],
+    software: ['Labview', 'Microsoft Office'],
     soft: ['Kepemimpinan', 'Problem Solving', 'Adaptasi Cepat', 'Komunikasi Efektif', 'Kolaborasi Tim']
   }
 
@@ -189,33 +218,42 @@ function App() {
   ]
 
   const milestones = [
-    { year: '2018', title: 'SMKN 1 Tambelang - Mulai Pendidikan Teknik Komputer dan Jaringan', type: 'education' },
-    { year: '2019', title: 'Magang PT Dharma ControlCable Indonesia - Quality Control', type: 'experience' },
-    { year: '2021', title: 'Lulus SMKN 1 Tambelang', type: 'education' },
-    { year: '2021', title: 'PT Prakarsa Alam Segar - Production Helper', type: 'experience' },
-    { year: '2021', title: 'PT Asatama Teknologi Terpadu - Network Engineer', type: 'experience' },
-    { year: '2022', title: 'Masuk Universitas Gadjah Mada - Teknologi Rekayasa Instrumentasi dan Kontrol', type: 'education' },
-    { year: '2022', title: 'UKK CUP - Humasi & IT', type: 'organization' },
-    { year: '2023', title: 'PKM KC - Monitoring Watch Cardiovascular', type: 'project' },
-    { year: '2023', title: 'PKM VGK - Edgytech Flathouse', type: 'project' },
-    { year: '2023', title: 'Robotik Academy - Student Trainee', type: 'experience' },
-    { year: '2023', title: 'PMK Sekolah Vokasi - Koordinator Media', type: 'organization' },
-    { year: '2023', title: 'Dialog Lintas Agama UGM - Koordinator Media', type: 'organization' },
-    { year: '2023', title: 'Gelanggang Expo & UKK CUP - IT Staff', type: 'organization' },
-    { year: '2023', title: 'ExcellencIA Learning Center - Video Editor', type: 'experience' },
-    { year: '2023', title: 'GAMAFORCE - Electronic Engineer', type: 'experience' },
-    { year: '2024', title: 'OTS Petrokimia Gresik - HMI Engineer', type: 'project' },
-    { year: '2024', title: 'OTS Pupuk Kujang - HMI Engineer', type: 'project' },
-    { year: '2024', title: 'Juara 2 Astranauts 2024', type: 'award' },
-    { year: '2024', title: 'Juara 1 SoTech 2024', type: 'award' },
-    { year: '2024', title: 'GAMAFORCE - Head of Khageswara Division', type: 'experience' },
-    { year: '2024', title: 'Pusat Kajian LKFT UGM - Automation Engineer', type: 'experience' },
-    { year: '2024', title: 'Juara 1 Divisi Technology Development - KRTI', type: 'award' },
-    { year: '2024', title: 'Finalis PIMNAS 36', type: 'award' },
-    { year: '2024', title: 'My Heavy Equipment - HKI EC002023102525', type: 'project' },
-    { year: '2025', title: 'Urban Portable Agriculture - Publikasi Jurnal', type: 'publication' },
-    { year: '2026', title: 'Lulus Universitas Gadjah Mada (Prediksi)', type: 'education' },
+    { year: '2018', month: 7, title: 'SMKN 1 Tambelang - Mulai Pendidikan', type: 'education' },
+    { year: '2019', month: 6, title: 'Magang PT Dharma ControlCable - Quality Control', type: 'experience' },
+    { year: '2021', month: 5, title: 'Lulus SMKN 1 Tambelang', type: 'education' },
+    { year: '2021', month: 7, title: 'PT Prakarsa Alam Segar - Production Helper', type: 'experience' },
+    { year: '2021', month: 10, title: 'PT Asatama Teknologi Terpadu - Network Engineer', type: 'experience' },
+    { year: '2022', month: 8, title: 'Masuk UGM - Teknologi Rekayasa Instrumentasi dan Kontrol', type: 'education' },
+    { year: '2022', month: 9, title: 'UKK CUP - Humasi & IT', type: 'organization' },
+    { year: '2023', month: 2, title: 'PMK Sekolah Vokasi - Koordinator Media', type: 'organization' },
+    { year: '2023', month: 3, title: 'ExcellencIA Learning Center - Video Editor', type: 'experience' },
+    { year: '2023', month: 4, title: 'PKM VGK - Edgytech Flathouse', type: 'project' },
+    { year: '2023', month: 5, title: 'Gelanggang Expo & UKK CUP - IT Staff', type: 'organization' },
+    { year: '2023', month: 8, title: 'Robotik Academy - Student Trainee', type: 'experience' },
+    { year: '2023', month: 8, title: 'Dialog Lintas Agama UGM - Koordinator Media', type: 'organization' },
+    { year: '2023', month: 2, title: 'PKM KC - Monitoring Watch Cardiovascular', type: 'project' },
+    { year: '2023', month: 12, title: 'GAMAFORCE - Electronic Engineer', type: 'experience' },
+    { year: '2024', month: 1, title: 'OTS Petrokimia Gresik - HMI Engineer', type: 'project' },
+    { year: '2024', month: 3, title: 'OTS Pupuk Kujang - HMI Engineer', type: 'project' },
+    { year: '2024', month: 8, title: 'Juara Harapan 1 SoTech 2024', type: 'award' },
+    { year: '2024', month: 8, title: 'Finalis PIMNAS 36', type: 'award' },
+    { year: '2024', month: 9, title: 'Pusat Kajian LKFT UGM - Automation Engineer', type: 'experience' },
+    { year: '2024', month: 10, title: 'My Heavy Equipment - HKI', type: 'project' },
+    { year: '2024', month: 10, title: 'Juara 2 Astranauts 2024', type: 'award' },
+    { year: '2024', month: 10, title: 'Juara 1 Divisi Technology Development - KRTI', type: 'award' },
+    { year: '2024', month: 12, title: 'GAMAFORCE - Head of Khageswara Division', type: 'experience' },
+    { year: '2025', month: 1, title: 'Urban Portable Agriculture - Publikasi Jurnal', type: 'publication' },
+    { year: '2026', month: 7, title: 'Lulus Universitas Gadjah Mada (Prediksi)', type: 'education' },
   ]
+
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  
+  const getMonthName = (month) => monthNames[month - 1]
+
+  const sortedMilestones = [...milestones].sort((a, b) => {
+    if (a.year !== b.year) return parseInt(a.year) - parseInt(b.year)
+    return a.month - b.month
+  })
 
   const contacts = [
     { label: 'Email', value: 'danielimanuelmanafe@mail.ugm.ac.id', link: 'mailto:danielimanuelmanafe@mail.ugm.ac.id' },
@@ -271,12 +309,27 @@ function App() {
   const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
   const filteredNews = filterItems(news, ['title', 'source', 'year'])
   const filteredOrganizations = filterItems(organizations, ['title', 'organization', 'date'])
-  const filteredMilestones = search ? milestones.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.year.includes(search)) : milestones
+  const filteredMilestones = search 
+    ? sortedMilestones.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.year.includes(search))
+    : sortedMilestones
 
   return (
     <>
+      {/* Particle Background */}
+      <div className="particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
+
       {/* Header */}
-      <header className="header">
+      <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-inner">
           <div className="header-left">
             <svg height="32" viewBox="0 0 16 16" width="32" fill="currentColor">
@@ -287,7 +340,7 @@ function App() {
               <a href="#experience">Experience</a>
               <a href="#projects">Projects</a>
               <a href="#publications">Publications</a>
-              <a href="#milestone">Milestone</a>
+              <a href="#milestone">My Timeline</a>
               <a href="#news">News</a>
             </nav>
           </div>
@@ -297,6 +350,11 @@ function App() {
               placeholder="Search" 
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  setSearch(e.target.value)
+                }
+              }}
             />
           </div>
         </div>
@@ -305,13 +363,14 @@ function App() {
       <main>
         {/* Profile Header */}
         <div className="profile-header">
-          <img src="/Portofolio/assets_foto/logo/IMG-20241228-WA0022.jpg" alt="Profile" className="profile-avatar" />
+          <div className="profile-avatar-container">
+            <img src="/Portofolio/assets_foto/logo/IMG-20241228-WA0022.jpg" alt="Profile" className="profile-avatar" />
+          </div>
           <div className="profile-info">
             <h1>Daniel Imanuel Manafe</h1>
-            <p className="username">Automation & Instrumentation Engineer</p>
+            <p className="username">Instrumentation & Control Engineering</p>
             <p>
-              Industrial Instrumentation & UAV Control Enthusiast | Project Leader | Astra Innovlab Awardee
-              Mahasiswa Instrumentation & Control Engineering di Universitas Gadjah Mada.
+              Automation Instrumentation & UAV Control Enthusiast 
             </p>
             <div className="profile-stats">
               <a href="#">
@@ -352,23 +411,26 @@ function App() {
 
         {/* About */}
         <section id="about" className="about-section">
-          <h2>
-            <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-            About
-          </h2>
+            <h2>
+              <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
+              About Me
+            </h2>
           <p>
-            Saya adalah mahasiswa Teknik Instrumentasi dan Kontrol di Universitas Gadjah Mada
-            dengan GPA 3.75/4.00. Memiliki pengalaman di berbagai sektor industri termasuk
-            otomasi industri, UAV, dan sistem kendali.
+            Saya adalah mahasiswa tingkat akhir di Universitas Gadjah Mada Program Studi 
+            Teknologi Rekayasa Instrumentasi dan Kontrol dengan GPA 3.75/4.00. 
+            Saya memiliki minat besar di bidang otomasi industri, sistem kontrol, 
+            dan teknologi UAV (Unmanned Aerial Vehicle).
           </p>
           <p>
-            Saya memiliki kepribadian ceria dan aktif berpartisipasi dalam berbagai 
-            kegiatan akademis dan organisasi. Rajin, bertanggung jawab, termotivasi diri, 
-            dan tidak takut menghadapi tantangan sulit.
+            Dengan pengalaman berbagai proyek industri dan kompetisi tingkat nasional, 
+            saya telah mengembangkan keahlian dalam perancangan sistem elektronik, 
+            pemrograman mikrokontroller, serta desain HMI untuk simulasi pelatihan operator. 
+            Saya aktif berpartisipasi dalam organisasi kemahasiswaan dan telah 
+            memperoleh prestasi di berbagai event.
           </p>
           
           <div style={{ marginTop: '24px' }}>
-            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Skills</h3>
+            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Technical Skills</h3>
             <div className="skill-tags" style={{ marginBottom: '16px' }}>
               {skills.hard.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
             </div>
@@ -380,7 +442,7 @@ function App() {
           <div className="section-header">
             <h2 className="section-title">Education</h2>
           </div>
-          <div className="education-list">
+          <div className="education-grid">
             {education.map((edu, i) => (
               <div key={i} className="education-card">
                 <h3>{edu.school}</h3>
@@ -426,7 +488,7 @@ function App() {
                   <span className="repo-name">
                     <a href="#">{proj.title}</a>
                   </span>
-                  <span className="repo-visibility">Public</span>
+                  <span className="repo-visibility">{proj.title.includes('OTS') ? 'Private' : 'Public'}</span>
                 </div>
                 <p className="repo-description">{proj.desc}</p>
                 <div className="repo-stats">
@@ -447,9 +509,9 @@ function App() {
           <div className="section-header">
             <h2 className="section-title">Publications</h2>
           </div>
-          <div className="item-list">
+          <div className="publications-grid">
             {filteredPublications.map((pub, i) => (
-              <div key={i} className="item-card">
+              <div key={i} className="publication-card">
                 <h3>{pub.title}</h3>
                 <p className="category">{pub.journal}</p>
                 <p className="meta">{pub.date} | {pub.role}</p>
@@ -470,9 +532,9 @@ function App() {
           <div className="section-header">
             <h2 className="section-title">News</h2>
           </div>
-          <div className="item-list">
+          <div className="news-grid">
             {filteredNews.map((item, i) => (
-              <div key={i} className="item-card">
+              <div key={i} className="news-card">
                 <h3>{item.title}</h3>
                 <p className="category">{item.category}</p>
                 <div className="item-links">
@@ -505,44 +567,49 @@ function App() {
 
         {/* Organizations */}
         <section style={{ marginTop: '32px' }}>
-          <div className="contact-section">
-            <h2>
-              <svg height="20" viewBox="0 0 16 16" width="20"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path></svg>
-              Organizations
-            </h2>
-            <div className="item-list">
-              {filteredOrganizations.map((org, i) => (
-                <div key={i} className="item-card">
-                  <h3>{org.title}</h3>
-                  <p className="category">{org.organization}</p>
-                  <p className="meta">{org.date}</p>
-                </div>
-              ))}
-              {filteredOrganizations.length === 0 && search && (
-                <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
-              )}
-            </div>
+          <div className="section-header">
+            <h2 className="section-title">Organizations</h2>
+          </div>
+          <div className="organizations-grid">
+            {filteredOrganizations.map((org, i) => (
+              <div key={i} className="organization-card">
+                <h3>{org.title}</h3>
+                <p className="category">{org.organization}</p>
+                <p className="meta">{org.date}</p>
+              </div>
+            ))}
+            {filteredOrganizations.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 
-        {/* Milestone */}
-        <section id="milestone" style={{ marginTop: '32px' }}>
+        {/* Milestone - Horizontal Timeline */}
+        <section id="milestone" className="milestone-section" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Milestone</h2>
+            <h2 className="section-title">My Timeline</h2>
           </div>
-          <div className="milestone-timeline">
-            {filteredMilestones.map((m, i) => (
-              <div key={i} className={`milestone-item milestone-${m.type}`}>
-                <span className="milestone-year">{m.year}</span>
-                <span className="milestone-dot"></span>
-                <div className="milestone-content">
-                  <p>{m.title}</p>
+          
+          <div className="timeline-container">
+            <div className="timeline-line"></div>
+            {[...filteredMilestones, ...filteredMilestones].map((m, i) => (
+              <div 
+                key={i} 
+                className={`milestone-node milestone-${m.type} ${i % 2 === 0 ? 'above' : 'below'}`}
+                style={{ animationDelay: `${(i % filteredMilestones.length) * 0.1}s` }}
+              >
+                <div className="milestone-card">
+                  <div className="milestone-date">
+                    <span className="month">{getMonthName(m.month)}</span>
+                    <span className="year">{m.year}</span>
+                  </div>
+                  <div className="milestone-content">
+                    <p>{m.title}</p>
+                  </div>
                 </div>
+                <div className="node-point"></div>
               </div>
             ))}
-            {filteredMilestones.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
-            )}
           </div>
         </section>
 
