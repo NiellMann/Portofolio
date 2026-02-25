@@ -64,7 +64,7 @@ function App() {
       ]
     },
     {
-      title: 'Student Trainee dan Desainer Sosial Media',
+      title: 'Student Trainee & Media Social Designer',
       company: 'Robotik Academy',
       date: 'Agustus 2023 - Januari 2024',
       duties: [
