@@ -364,7 +364,7 @@ function App() {
         {/* Profile Header */}
         <div className="profile-header">
           <div className="profile-avatar-container">
-            <img src="/Portofolio/assets_foto/logo/IMG-20241228-WA0022.jpg" alt="Profile" className="profile-avatar" />
+            <img src="./assets_foto/logo/profile_photo.jpg" alt="Profile" className="profile-avatar" />
           </div>
           <div className="profile-info">
             <h1>Daniel Imanuel Manafe</h1>
