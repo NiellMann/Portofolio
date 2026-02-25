@@ -476,7 +476,6 @@ function App() {
                 <span className="milestone-year">{m.year}</span>
                 <span className="milestone-dot"></span>
                 <div className="milestone-content">
-                  <span className={`milestone-type-badge ${m.type}`}>{m.type}</span>
                   <p>{m.title}</p>
                 </div>
               </div>

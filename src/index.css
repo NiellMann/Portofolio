@@ -513,44 +513,34 @@ main {
   font-size: 13px;
 }
 
-/* Milestone Timeline */
+/* Milestone Timeline - Compact Graph Style */
 .milestone-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
 }
 
 .milestone-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 12px 0;
-  position: relative;
-}
-
-.milestone-item:not(:last-child)::before {
-  content: '';
-  position: absolute;
-  left: 38px;
-  top: 28px;
-  bottom: -12px;
-  width: 2px;
-  background: var(--border);
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11px;
 }
 
 .milestone-year {
-  font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
-  min-width: 40px;
-  text-align: right;
+  min-width: 32px;
 }
 
 .milestone-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  margin-top: 4px;
   flex-shrink: 0;
 }
 
@@ -563,28 +553,21 @@ main {
 
 .milestone-content {
   flex: 1;
+  overflow: hidden;
 }
 
 .milestone-content p {
-  font-size: 14px;
+  font-size: 11px;
   color: var(--text-primary);
-  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .milestone-type-badge {
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  text-transform: uppercase;
-  font-weight: 600;
+  display: none;
 }
-
-.milestone-type-badge.education { background: rgba(88, 166, 255, 0.2); color: #58a6ff; }
-.milestone-type-badge.experience { background: rgba(63, 185, 80, 0.2); color: #3fb950; }
-.milestone-type-badge.organization { background: rgba(163, 113, 247, 0.2); color: #a371f7; }
-.milestone-type-badge.project { background: rgba(210, 153, 34, 0.2); color: #d29922; }
-.milestone-type-badge.award { background: rgba(248, 81, 73, 0.2); color: #f85149; }
-.milestone-type-badge.publication { background: rgba(121, 192, 255, 0.2); color: #79c0ff; }
 
 /* Footer */
 footer {
