@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"require('fs').cpSync('assets_foto', 'dist/assets_foto', {recursive:true}); require('fs').cpSync('referensi', 'dist/referensi', {recursive:true})\"",
     "preview": "vite preview"
   },
   "dependencies": {

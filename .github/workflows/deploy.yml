@@ -23,10 +23,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          sparse-checkout: |
-            dist
-            .gitignore
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Copy static files
+        run: |
+          cp -r assets_foto dist/
+          cp -r referensi dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
