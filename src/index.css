@@ -513,52 +513,76 @@ main {
   font-size: 13px;
 }
 
-/* Milestone - Simple Tags Style */
+/* Milestone - Complex Timeline Graph Style */
 .milestone-timeline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--border);
 }
 
 .milestone-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 6px;
-  background: var(--bg-tertiary);
-  border-radius: 3px;
-  font-size: 9px;
-  white-space: nowrap;
+  position: relative;
+  padding: 8px 0 16px 20px;
+  margin-left: -2px;
 }
+
+.milestone-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid;
+}
+
+.milestone-education::before { border-color: #58a6ff; }
+.milestone-experience::before { border-color: #3fb950; }
+.milestone-organization::before { border-color: #a371f7; }
+.milestone-project::before { border-color: #d29922; }
+.milestone-award::before { border-color: #f85149; }
+.milestone-publication::before { border-color: #79c0ff; }
 
 .milestone-year {
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   color: var(--text-muted);
-}
-
-.milestone-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
+  display: block;
+  margin-bottom: 2px;
 }
 
 .milestone-content {
-  color: var(--text-secondary);
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: relative;
 }
 
-.milestone-education .milestone-dot { background: #58a6ff; }
-.milestone-experience .milestone-dot { background: #3fb950; }
-.milestone-organization .milestone-dot { background: #a371f7; }
-.milestone-project .milestone-dot { background: #d29922; }
-.milestone-award .milestone-dot { background: #f85149; }
-.milestone-publication .milestone-dot { background: #79c0ff; }
+.milestone-content::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transform: rotate(45deg);
+}
 
 .milestone-content p {
   margin: 0;
-  font-size: 9px;
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.milestone-dot {
+  display: none;
 }
 
 /* Footer */
