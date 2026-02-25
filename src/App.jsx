@@ -13,8 +13,8 @@ function App() {
       ]
     },
     {
-      title: 'HMI Engineer',
-      company: 'OTS Merah Putih - LKFT UGM',
+      title: 'Automation Engineer',
+      company: 'Pusat Kajian LKFT UGM',
       date: 'September 2024 - Sekarang',
       duties: [
         'Membuat HMI OTS untuk proses produksi Asam Phosfat (PT. Petrokimia Gresik Production 3B)',
@@ -207,11 +207,11 @@ function App() {
       {/* Hero */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <h1>Instrumentation &<br /><span>Control Engineer</span></h1>
+          <h1>Automation &<br /><span>Instrumentation Engineer</span></h1>
           <p>
-            Mahasiswa Universitas Gadjah Mada dengan fokus pada sistem instrumentasi dan kontrol.
-            Memiliki pengalaman di berbagai sektor industri: makanan, jaringan, otomotof, dan pendidikan.
-            Spesialis dalam desain elektronik, pengembangan sistem kendali, dan IoT.
+            Industrial Instrumentation & UAV Control Enthusiast | Project Leader | Astra Innovlab Awardee
+            Mahasiswa Instrumentation & Control Engineering di Universitas Gadjah Mada dengan pengalaman 
+            di berbagai sektor industri. Spesialis dalam desain elektronik, sistem kendali, IoT, dan otomasi industri.
           </p>
           <a href="#contact" className="btn">Get In Touch</a>
         </div>
@@ -228,12 +228,13 @@ function App() {
             <h3>Daniel Imanuel Manafe</h3>
             <p>
               Saya adalah mahasiswa Teknik Instrumentasi dan Kontrol di Universitas Gadjah Mada
-              dengan GPA 3.75/4.00. Memiliki pengalaman magang selama 1.5 tahun di berbagai
-              sektor industri.
+              dengan GPA 3.75/4.00. Memiliki pengalaman di berbagai sektor industri termasuk
+              otomasi industri, UAV, dan sistem kendali.
             </p>
             <p>
-              Saya memiliki kompetensi teknis dalam desain elektronik, pengembangan sistem kendali,
-              PLC programming, dan IoT. Saya juga aktif dalam penelitian dan kompetisi robotika.
+              Saya memiliki kepribadian ceria dan berbagai hobi. Aktif berpartisipasi dalam berbagai 
+              kegiatan akademis dan organisasi. Rajin, bertanggung jawab, termotivasi diri, 
+              dan tidak takut menghadapi tantangan sulit.
             </p>
             <div className="awards-preview">
               <h4>Penghargaan</h4>
@@ -246,8 +247,8 @@ function App() {
           </div>
           <div className="about-stats">
             <div className="stat-box">
-              <h4>1.5+</h4>
-              <p>Years Internship</p>
+              <h4>3.7+</h4>
+              <p>Years Experience</p>
             </div>
             <div className="stat-box">
               <h4>10+</h4>
@@ -258,8 +259,8 @@ function App() {
               <p>Publications & Awards</p>
             </div>
             <div className="stat-box">
-              <h4>3.75</h4>
-              <p>GPA</p>
+              <h4>500+</h4>
+              <p>LinkedIn Connections</p>
             </div>
           </div>
         </div>
