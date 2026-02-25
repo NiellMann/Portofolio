@@ -5,16 +5,6 @@ function App() {
   
   const experience = [
     {
-      title: 'Head of Khageswara Technology Development',
-      company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
-      date: 'Desember 2024 - Desember 2025',
-      duties: [
-        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter',
-        'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
-        'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
-      ]
-    },
-    {
       title: 'Automation Engineer',
       company: 'Pusat Kajian LKFT UGM',
       date: 'September 2024 - Sekarang',
@@ -22,6 +12,16 @@ function App() {
         'Membuat HMI OTS untuk proses produksi Asam Phosfat (PT. Petrokimia Gresik Production 3B)',
         'Membuat HMI OTS untuk proses produksi Ammonia (PT. Pupuk Kujang Production 3A)',
         'Berperan sebagai pemimpin proyek digitalisasi sistem pelatihan operator',
+      ]
+    },
+    {
+      title: 'Head of Khageswara Technology Development',
+      company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
+      date: 'Desember 2024 - Desember 2025',
+      duties: [
+        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter',
+        'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
+        'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
       ]
     },
     {
