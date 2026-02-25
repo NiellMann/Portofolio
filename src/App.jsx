@@ -112,6 +112,14 @@ function App() {
 
   const publications = [
     {
+      title: 'My Heavy Equipment: Layanan Informasi Riwayat Perbaikan Pada Alat Berat Berbasis Internet Of Things',
+      journal: 'Hak Kekayaan Intelektual (HKI) - Kementerian Hukum dan HAM',
+      date: 'Oktober 2023',
+      pages: 'Nomor Pencatatan: 000535480',
+      doi: 'EC002023102525',
+      role: 'Pencipta (Co-Author)'
+    },
+    {
       title: 'Sistem Urban Portable Agriculture Berbasis IoT: Validasi Teknis dan Analisis Kinerja Platform Monitoring Hidroponik Berbiaya Rendah',
       journal: 'Jurnal Kolaboratif Sains, Volume 8 No. 11',
       date: 'November 2025',
@@ -183,16 +191,11 @@ function App() {
     { label: 'GitHub', value: 'github.com/NiellMann', link: 'https://github.com/NiellMann' },
   ]
 
-  const recommendations = [
-    { name: 'Jans Hendry, S.T., M.Eng.', role: 'Dosen Pembimbing Akademik', email: 'jans.hendry@ugm.ac.id' },
-    { name: 'Ardhi Wicaksono Santoso, S.Kom., M.Cs.', role: 'Dosen Project LKFT UGM', email: 'ardhi.wicaksono.s@mail.ugm.ac.id' },
-  ]
-
   return (
     <>
       {/* Header */}
       <header>
-        <div className="logo">Daniel<span>.E</span></div>
+        <div className="logo">DANIEL<span>.ID</span></div>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -412,12 +415,6 @@ function App() {
                 <strong>{contact.label}:</strong>
                 <a href={contact.link} target="_blank" rel="noopener noreferrer">{contact.value}</a>
               </div>
-            ))}
-          </div>
-          <div className="recommendations">
-            <h3>Kontak Rekomendasi</h3>
-            {recommendations.map((rec, i) => (
-              <p key={i}><strong>{rec.name}</strong> - {rec.role}<br/>{rec.email}</p>
             ))}
           </div>
         </div>

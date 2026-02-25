@@ -1,11 +1,11 @@
 :root {
-  --bg-dark: #0d0d0d;
-  --bg-card: #161616;
-  --accent: #f5a623;
-  --accent-dim: #b87d1a;
-  --text: #e8e8e8;
-  --text-dim: #888;
-  --border: #2a2a2a;
+  --bg-dark: #0a0f14;
+  --bg-card: #111920;
+  --accent: #00d4aa;
+  --accent-dim: #00997a;
+  --text: #e0e8ec;
+  --text-dim: #8899a0;
+  --border: #1e2a35;
 }
 
 * {
@@ -23,6 +23,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text);
   line-height: 1.7;
+  background-image: linear-gradient(135deg, #0a0f14 0%, #0d1821 50%, #0a1512 100%);
 }
 
 a {
@@ -36,7 +37,7 @@ a:hover {
 
 /* Header */
 header {
-  background: #111;
+  background: linear-gradient(90deg, #0a0f14 0%, #111920 100%);
   border-bottom: 1px solid var(--accent);
   padding: 1rem 5%;
   display: flex;
@@ -80,10 +81,11 @@ nav a:hover {
 /* Hero */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #0a0f14 0%, #0d1821 50%, #0a1512 100%);
   display: flex;
   align-items: center;
   padding: 100px 5% 50px;
+  border-bottom: 1px solid var(--accent);
 }
 
 .hero-content {
@@ -491,9 +493,13 @@ section {
 
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 30px;
+}
+
+.contact-list .contact-item:first-child {
+  grid-column: 1 / -1;
 }
 
 .contact-item {
