@@ -465,27 +465,6 @@ function App() {
           </div>
         </section>
 
-        {/* Milestone */}
-        <section id="milestone" style={{ marginTop: '32px' }}>
-          <div className="section-header">
-            <h2 className="section-title">Milestone</h2>
-          </div>
-          <div className="milestone-timeline">
-            {filteredMilestones.map((m, i) => (
-              <div key={i} className={`milestone-item milestone-${m.type}`}>
-                <span className="milestone-year">{m.year}</span>
-                <span className="milestone-dot"></span>
-                <div className="milestone-content">
-                  <p>{m.title}</p>
-                </div>
-              </div>
-            ))}
-            {filteredMilestones.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
-            )}
-          </div>
-        </section>
-
         {/* News */}
         <section id="news" style={{ marginTop: '32px' }}>
           <div className="section-header">
@@ -542,7 +521,28 @@ function App() {
               {filteredOrganizations.length === 0 && search && (
                 <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
               )}
-</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Milestone */}
+        <section id="milestone" style={{ marginTop: '32px' }}>
+          <div className="section-header">
+            <h2 className="section-title">Milestone</h2>
+          </div>
+          <div className="milestone-timeline">
+            {filteredMilestones.map((m, i) => (
+              <div key={i} className={`milestone-item milestone-${m.type}`}>
+                <span className="milestone-year">{m.year}</span>
+                <span className="milestone-dot"></span>
+                <div className="milestone-content">
+                  <p>{m.title}</p>
+                </div>
+              </div>
+            ))}
+            {filteredMilestones.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 

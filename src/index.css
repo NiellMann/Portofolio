@@ -513,22 +513,25 @@ main {
   font-size: 13px;
 }
 
-/* Milestone Timeline - Compact Graph Style */
+/* Milestone Timeline - Horizontal Bar Graph Style */
 .milestone-timeline {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .milestone-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
+  gap: 6px;
+  padding: 4px 8px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 11px;
+  border-radius: 4px;
+  font-size: 10px;
+  min-width: auto;
+  width: auto;
 }
 
 .milestone-year {
