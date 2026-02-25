@@ -7,7 +7,7 @@ function App() {
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
       date: 'Desember 2024 - Desember 2025',
       duties: [
-        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL Tailsitter',
+        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter',
         'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
         'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
       ]
@@ -95,8 +95,8 @@ function App() {
       hki: 'EC002023102525'
     },
     {
-      title: 'VTOL Tailsitter UAV',
-      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL Tailsitter untuk kompetisi KRTI (Kontes Robot Terbang Indonesia).',
+      title: 'VTOL UAV Hybrid Quadcopter',
+      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL UAV Hybrid Quadcopter untuk kompetisi KRTI (Kontes Robot Terbang Indonesia).',
       tech: ['VTOL', 'UAV', 'Flight Control'],
       link: '#'
     },
