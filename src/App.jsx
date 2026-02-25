@@ -490,24 +490,6 @@ function App() {
           </div>
         </section>
 
-        {/* Contact */}
-        <section style={{ marginTop: '32px' }}>
-          <div className="contact-section">
-            <h2>
-              <svg height="20" viewBox="0 0 16 16" width="20"><path d="M0 4.75C0 3.784.784 3 1.75 3h12.5c.966 0 1.75.784 1.75 1.75v6.5A1.75 1.75 0 0 1 14.25 13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-6.5a.25.25 0 0 0-.25-.25ZM3.5 6.25a.75.75 0 0 1 .75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5h-4Z"></path></svg>
-              Contact
-            </h2>
-            <div className="contact-list">
-              {contacts.map((c, i) => (
-                <div key={i} className="contact-item">
-                  <strong>{c.label}</strong>
-                  <a href={c.link} target="_blank">{c.value}</a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Organizations */}
         <section style={{ marginTop: '32px' }}>
           <div className="contact-section">
@@ -527,28 +509,6 @@ function App() {
                 <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
               )}
 </div>
-          </div>
-        </section>
-
-        {/* Organizations */}
-        <section style={{ marginTop: '32px' }}>
-          <div className="contact-section">
-            <h2>
-              <svg height="20" viewBox="0 0 16 16" width="20"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path></svg>
-              Organizations
-            </h2>
-            <div className="item-list">
-              {filteredOrganizations.map((org, i) => (
-                <div key={i} className="item-card">
-                  <h3>{org.title}</h3>
-                  <p className="category">{org.organization}</p>
-                  <p className="meta">{org.date}</p>
-                </div>
-              ))}
-              {filteredOrganizations.length === 0 && search && (
-                <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
-              )}
-            </div>
           </div>
         </section>
 
