@@ -188,6 +188,35 @@ function App() {
     },
   ]
 
+  const milestones = [
+    { year: '2018', title: 'SMKN 1 Tambelang - Mulai Pendidikan Teknik Komputer dan Jaringan', type: 'education' },
+    { year: '2019', title: 'Magang PT Dharma ControlCable Indonesia - Quality Control', type: 'experience' },
+    { year: '2021', title: 'Lulus SMKN 1 Tambelang', type: 'education' },
+    { year: '2021', title: 'PT Prakarsa Alam Segar - Production Helper', type: 'experience' },
+    { year: '2021', title: 'PT Asatama Teknologi Terpadu - Network Engineer', type: 'experience' },
+    { year: '2022', title: 'Masuk Universitas Gadjah Mada - Teknologi Rekayasa Instrumentasi dan Kontrol', type: 'education' },
+    { year: '2022', title: 'UKK CUP - Humasi & IT', type: 'organization' },
+    { year: '2023', title: 'PKM KC - Monitoring Watch Cardiovascular', type: 'project' },
+    { year: '2023', title: 'PKM VGK - Edgytech Flathouse', type: 'project' },
+    { year: '2023', title: 'Robotik Academy - Student Trainee', type: 'experience' },
+    { year: '2023', title: 'PMK Sekolah Vokasi - Koordinator Media', type: 'organization' },
+    { year: '2023', title: 'Dialog Lintas Agama UGM - Koordinator Media', type: 'organization' },
+    { year: '2023', title: 'Gelanggang Expo & UKK CUP - IT Staff', type: 'organization' },
+    { year: '2023', title: 'ExcellencIA Learning Center - Video Editor', type: 'experience' },
+    { year: '2023', title: 'GAMAFORCE - Electronic Engineer', type: 'experience' },
+    { year: '2024', title: 'OTS Petrokimia Gresik - HMI Engineer', type: 'project' },
+    { year: '2024', title: 'OTS Pupuk Kujang - HMI Engineer', type: 'project' },
+    { year: '2024', title: 'Juara 2 Astranauts 2024', type: 'award' },
+    { year: '2024', title: 'Juara 1 SoTech 2024', type: 'award' },
+    { year: '2024', title: 'GAMAFORCE - Head of Khageswara Division', type: 'experience' },
+    { year: '2024', title: 'Pusat Kajian LKFT UGM - Automation Engineer', type: 'experience' },
+    { year: '2024', title: 'Juara 1 Divisi Technology Development - KRTI', type: 'award' },
+    { year: '2024', title: 'Finalis PIMNAS 36', type: 'award' },
+    { year: '2024', title: 'My Heavy Equipment - HKI EC002023102525', type: 'project' },
+    { year: '2025', title: 'Urban Portable Agriculture - Publikasi Jurnal', type: 'publication' },
+    { year: '2026', title: 'Lulus Universitas Gadjah Mada (Prediksi)', type: 'education' },
+  ]
+
   const contacts = [
     { label: 'Email', value: 'danielimanuelmanafe@mail.ugm.ac.id', link: 'mailto:danielimanuelmanafe@mail.ugm.ac.id' },
     { label: 'WhatsApp', value: '0881-1552-351', link: 'https://wa.me/628811552351' },
@@ -242,6 +271,7 @@ function App() {
   const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
   const filteredNews = filterItems(news, ['title', 'source', 'year'])
   const filteredOrganizations = filterItems(organizations, ['title', 'organization', 'date'])
+  const filteredMilestones = search ? milestones.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.year.includes(search)) : milestones
 
   return (
     <>
@@ -257,6 +287,7 @@ function App() {
               <a href="#experience">Experience</a>
               <a href="#projects">Projects</a>
               <a href="#publications">Publications</a>
+              <a href="#milestone">Milestone</a>
               <a href="#news">News</a>
             </nav>
           </div>
@@ -429,6 +460,28 @@ function App() {
               </div>
             ))}
             {filteredPublications.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
+          </div>
+        </section>
+
+        {/* Milestone */}
+        <section id="milestone" style={{ marginTop: '32px' }}>
+          <div className="section-header">
+            <h2 className="section-title">Milestone</h2>
+          </div>
+          <div className="milestone-timeline">
+            {filteredMilestones.map((m, i) => (
+              <div key={i} className={`milestone-item milestone-${m.type}`}>
+                <span className="milestone-year">{m.year}</span>
+                <span className="milestone-dot"></span>
+                <div className="milestone-content">
+                  <span className={`milestone-type-badge ${m.type}`}>{m.type}</span>
+                  <p>{m.title}</p>
+                </div>
+              </div>
+            ))}
+            {filteredMilestones.length === 0 && search && (
               <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
