@@ -383,7 +383,10 @@ function App() {
               </a>
               <a href="#">
                 <svg height="16" viewBox="0 0 16 16" width="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-              Yogyakarta, Indonesia
+                Yogyakarta, Indonesia
+              </a>
+              <a href="/referensi/CV_Daniel Imanuel Manafe.pdf" download>
+                <svg height="16" viewBox="0 0 16 16" width="16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M11.78 4.72a.749.749 0 0 1-.02 1.06L8.53 8.97a.75.75 0 0 1-1.06 0L4.24 5.78a.749.749 0 0 1 .02-1.06.749.749 0 0 1 1.06.02L7.25 6.69V1.75a.75.75 0 0 1 1.5 0v4.94l1.93-1.95a.749.749 0 0 1 1.06-.02h.04Z"></path></svg>
               </a>
             </div>
           </div>
