@@ -116,7 +116,6 @@ function App() {
       journal: 'Hak Kekayaan Intelektual (HKI) - Kementerian Hukum dan HAM',
       date: 'Oktober 2023',
       pages: 'Nomor Pencatatan: 000535480',
-      doi: 'EC002023102525',
       pdf: '/referensi/HKI Aplikasi.pdf',
       role: 'Pencipta (Co-Author)'
     },
@@ -125,8 +124,7 @@ function App() {
       journal: 'Jurnal Kolaboratif Sains, Volume 8 No. 11',
       date: 'November 2025',
       pages: '6640-6653',
-      doi: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560',
-      pdf: '/referensi/8560-Article Text-40892-2-10-20251110.pdf',
+      link: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560',
       role: 'Co-Author'
     },
     {
@@ -134,8 +132,7 @@ function App() {
       journal: 'Dharma Ekonomi, Volume 33 Nomor 1',
       date: 'Mei 2026',
       pages: '24-36',
-      doi: 'https://doi.org/10.59725/de.v33i1.386',
-      pdf: '/referensi/DE+VOL.33+NO+1+2026+HAL+24-36.pdf',
+      link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/364',
       role: 'Co-Author'
     },
   ]
@@ -410,9 +407,11 @@ function App() {
               <p className="journal">{pub.journal}</p>
               <p className="meta">{pub.date} | {pub.role}</p>
               <div className="pub-links">
-                <a href={pub.pdf} target="_blank" rel="noopener noreferrer" className="pub-link">View PDF</a>
-                {pub.doi.includes('http') && (
-                  <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-link">Journal Link</a>
+                {pub.pdf && (
+                  <a href={pub.pdf} target="_blank" rel="noopener noreferrer" className="pub-link">View PDF</a>
+                )}
+                {pub.link && (
+                  <a href={pub.link} target="_blank" rel="noopener noreferrer" className="pub-link">Journal Link</a>
                 )}
               </div>
             </div>
