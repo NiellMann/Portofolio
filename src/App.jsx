@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
+  const [search, setSearch] = useState('')
+  
+  const filterItems = (items, keys) => {
+    if (!search) return items
+    const q = search.toLowerCase()
+    return items.filter(item => keys.some(key => {
+      const val = item[key]
+      if (Array.isArray(val)) return val.some(v => String(v).toLowerCase().includes(q))
+      return String(val).toLowerCase().includes(q)
+    }))
+  }
+  
+  const filteredExperience = filterItems(experience, ['title', 'company', 'date', 'duties'])
+  const filteredProjects = filterItems(projects, ['title', 'description', 'tech', 'event'])
+  const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
+  const filteredNews = filterItems(news, ['title', 'source', 'year'])
+  
   const experience = [
     {
       title: 'Head of Khageswara Technology Development',
@@ -222,7 +239,12 @@ function App() {
             </nav>
           </div>
           <div className="header-search">
-            <input type="text" placeholder="Search" />
+            <input 
+              type="text" 
+              placeholder="Search" 
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
         </div>
       </header>
@@ -323,7 +345,7 @@ function App() {
             <h2 className="section-title">Experience</h2>
           </div>
           <div className="experience-list">
-            {experience.map((exp, i) => (
+            {filteredExperience.map((exp, i) => (
               <div key={i} className="experience-card">
                 <h3>{exp.title}</h3>
                 <p className="company">{exp.company}</p>
@@ -333,6 +355,9 @@ function App() {
                 </ul>
               </div>
             ))}
+            {filteredExperience.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 
@@ -342,7 +367,7 @@ function App() {
             <h2 className="section-title">Projects</h2>
           </div>
           <div className="repo-grid">
-            {projects.map((proj, i) => (
+            {filteredProjects.map((proj, i) => (
               <div key={i} className="repo-card">
                 <div className="repo-top">
                   <span className="repo-name">
@@ -358,6 +383,9 @@ function App() {
                 </div>
               </div>
             ))}
+            {filteredProjects.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 
@@ -367,7 +395,7 @@ function App() {
             <h2 className="section-title">Publications</h2>
           </div>
           <div className="item-list">
-            {publications.map((pub, i) => (
+            {filteredPublications.map((pub, i) => (
               <div key={i} className="item-card">
                 <h3>{pub.title}</h3>
                 <p className="category">{pub.journal}</p>
@@ -378,6 +406,9 @@ function App() {
                 </div>
               </div>
             ))}
+            {filteredPublications.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 
@@ -387,7 +418,7 @@ function App() {
             <h2 className="section-title">News</h2>
           </div>
           <div className="item-list">
-            {news.map((item, i) => (
+            {filteredNews.map((item, i) => (
               <div key={i} className="item-card">
                 <h3>{item.title}</h3>
                 <p className="category">{item.category}</p>
@@ -398,6 +429,9 @@ function App() {
                 </div>
               </div>
             ))}
+            {filteredNews.length === 0 && search && (
+              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
+            )}
           </div>
         </section>
 
