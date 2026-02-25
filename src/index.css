@@ -124,8 +124,8 @@ main {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: var(--bg-secondary);
   border: 1px solid var(--border);
+  object-fit: cover;
 }
 
 .profile-info h1 {
