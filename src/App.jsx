@@ -177,8 +177,9 @@ function App() {
 
   const contacts = [
     { label: 'Email', value: 'danielimanuelmanafe@mail.ugm.ac.id', link: 'mailto:danielimanuelmanafe@mail.ugm.ac.id' },
-    { label: 'Phone', value: '0881-1552-351', link: 'tel:08811552351' },
-    { label: 'LinkedIn', value: 'linkedin.com/in/danielimanuelmanafe', link: 'https://linkedin.com/in/danielimanuelmanafe' },
+    { label: 'WhatsApp', value: '0881-1552-351', link: 'https://wa.me/628811552351' },
+    { label: 'LinkedIn', value: 'bit.ly/Niell_LinkedIn', link: 'https://bit.ly/Niell_LinkedIn' },
+    { label: 'GrabCAD', value: '3D Models Portfolio', link: 'https://bit.ly/Niell_3DModels' },
     { label: 'GitHub', value: 'github.com/NiellMann', link: 'https://github.com/NiellMann' },
   ]
 
