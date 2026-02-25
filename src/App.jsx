@@ -82,15 +82,25 @@ function App() {
   const projects = [
     {
       title: 'Urban Portable Agriculture (UPA) Berbasis IoT',
-      desc: 'Sistem pertanian hidroponik vertikal berbasis IoT dengan sensor pH dan kekeruhan, kontrol LED otomatis, dan dashboard real-time.',
-      tech: ['ESP32', 'IoT', 'Sensor pH'],
+      desc: 'Sistem pertanian hidroponik vertikal berbasis IoT dengan sensor pH dan kekeruhan, kontrol LED otomatis, dan dashboard real-time. Validasi teknis menunjukkan akurasi sensor pH ±0.1.',
+      tech: ['ESP32', 'IoT', 'Sensor pH', 'DBSCAN'],
       link: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560'
     },
     {
       title: 'My Heavy Equipment - Aplikasi IoT',
-      desc: 'Layanan informasi riwayat perbaikan pada alat berat berbasis Internet of Things. Terdaftar di HKI.',
-      tech: ['IoT', 'Heavy Equipment'],
+      desc: 'Layanan informasi riwayat perbaikan pada alat berat berbasis Internet of Things. Terdaftar di HKI dengan nomor pencatatan 000535480.',
+      tech: ['IoT', 'Heavy Equipment', 'Monitoring'],
       hki: 'EC002023102525'
+    },
+    {
+      title: 'Monitoring Watch Cardiovascular - PKM KC',
+      desc: 'Desain PCB dengan KiCAD 8.0 dan pengujian sensor detak jantung. Merancang prototipe wearable kesehatan untuk penderita kardiovaskular.',
+      tech: ['KiCAD', 'Sensor ECG', 'Embedded System']
+    },
+    {
+      title: 'Edgytech Flathouse - PKM VGK',
+      desc: 'Sistem monitoring energi terbarukan untuk rumah susun dengan penelitian pemanfaatan energi alternatif pada hunian vertikal ramah lingkungan.',
+      tech: ['Renewable Energy', 'Smart Grid', 'Monitoring']
     },
     {
       title: 'VTOL UAV Hybrid Quadcopter',
@@ -100,7 +110,7 @@ function App() {
     {
       title: 'HMI Industrial Process',
       desc: 'Human Machine Interface untuk proses produksi Asam Phosfat dan Ammonia di PT Petrokimia dan Pupuk Kujang.',
-      tech: ['HMI', 'Industrial Automation']
+      tech: ['HMI', 'Industrial Automation', 'SCADA']
     },
   ]
 
