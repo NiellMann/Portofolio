@@ -368,7 +368,7 @@ function App() {
             <h1>Daniel Imanuel Manafe</h1>
             <p className="username">Instrumentation & Control Engineering</p>
             <p>
-              Copyright © 2026 Daniel Imanuel Manafe 
+              Automation, Instrumentation & UAV Control Enthusiast 
             </p>
             <div className="profile-stats">
               <a href="#">
