@@ -294,15 +294,30 @@ section:nth-child(even) {
   gap: 32px;
 }
 
-.header-left svg {
-  fill: var(--text-primary);
+.header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-glow);
   transition: var(--transition-normal);
-  animation: float 6s ease-in-out infinite;
+  animation: avatarPulse 3s ease-in-out infinite;
 }
 
-.header-left svg:hover {
-  fill: var(--accent);
-  filter: drop-shadow(0 0 10px var(--accent-glow));
+.header-avatar:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent-glow);
+  animation: none;
+  transform: scale(1.1);
+}
+
+@keyframes avatarPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
 }
 
 .header-nav {
@@ -1394,6 +1409,32 @@ section {
 
 .contact-item a:hover {
   color: var(--accent);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: var(--transition-normal);
+}
+
+.contact-icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
 }
 
 /* ========== MILESTONE - HORIZONTAL TIMELINE ========== */

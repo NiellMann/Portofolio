@@ -161,4 +161,4 @@ npm install
 
 ## Lisensi
 
-Copyright © 2024 Daniel Imanuel Manafe
+Copyright © 2025 Daniel Imanuel Manafe
