@@ -207,7 +207,7 @@ function App() {
       school: 'Universitas Gadjah Mada',
       degree: 'Teknologi Rekayasa Instrumentasi dan Kontrol',
       year: '2022 - Sekarang',
-      gpa: 'GPA: 3.75 / 4.00'
+      gpa: 'GPA: 3.77 / 4.00'
     },
     {
       school: 'SMKN 1 Tambelang, Bekasi',
