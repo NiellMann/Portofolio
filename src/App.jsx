@@ -332,7 +332,7 @@ function App() {
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-inner">
           <div className="header-left">
-            <img src="/assets_foto/logo/profile_photo.jpg" alt="Profile" className="header-avatar" />
+            <img src="assets_foto/logo/profile_photo.jpg" alt="Profile" className="header-avatar" />
             <nav className="header-nav">
               <a href="#about">About</a>
               <a href="#experience">Experience</a>
@@ -362,7 +362,7 @@ function App() {
         {/* Profile Header */}
         <div className="profile-header">
           <div className="profile-avatar-container">
-            <img src="/assets_foto/logo/profile_photo.jpg" alt="Profile" className="profile-avatar" />
+            <img src="assets_foto/logo/profile_photo.jpg" alt="Profile" className="profile-avatar" />
           </div>
           <div className="profile-info">
             <h1>Daniel Imanuel Manafe</h1>
