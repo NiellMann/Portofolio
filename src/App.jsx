@@ -418,7 +418,7 @@ function App() {
             </h2>
           <p>
             Saya adalah mahasiswa tingkat akhir di Universitas Gadjah Mada Program Studi 
-            Teknologi Rekayasa Instrumentasi dan Kontrol dengan GPA 3.75/4.00. 
+            Teknologi Rekayasa Instrumentasi dan Kontrol dengan GPA 3.77/4.00. 
             Saya memiliki minat besar di bidang otomasi industri, sistem kontrol, 
             dan teknologi UAV (Unmanned Aerial Vehicle).
           </p>
