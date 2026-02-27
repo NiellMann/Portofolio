@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-daniel",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node -e \"if(!require('fs').existsSync('public/assets_foto')){require('fs').cpSync('assets_foto','public/assets_foto',{recursive:true});require('fs').cpSync('referensi','public/referensi',{recursive:true})}\"",
+    "dev": "vite",
+    "build": "vite build && node -e \"require('fs').cpSync('assets_foto', 'dist/assets_foto', {recursive:true}); require('fs').cpSync('referensi', 'dist/referensi', {recursive:true})\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0"
+  }
+}
