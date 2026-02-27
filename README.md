@@ -25,7 +25,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🔗 [Assets & Snippets](#links)
-6. 🚀 [More](#more)
+6. 📤 [Git Push Tutorial](#git-push)
 
 ## ⚠️ Tutorial
 
@@ -129,6 +129,40 @@ Assets and snippets used in the project can be found in the **[video kit](https:
   <img src="public/images/readme-video-kit.png" alt="Video Kit Banner">
 </a>
 
+
+## <a name="git-push">📤 Git Push Tutorial</a>
+
+Berikut cara push project ke GitHub:
+
+### 1. Inisialisasi Git (jika belum ada)
+```bash
+git init
+```
+
+### 2. Tambahkan semua file
+```bash
+git add .
+```
+
+### 3. Buat commit
+```bash
+git commit -m "Pesan commit"
+```
+
+### 4. Tambahkan remote (jika belum ada)
+```bash
+git remote add origin https://github.com/username/repository.git
+```
+
+### 5. Push ke GitHub
+```bash
+git push -u origin main
+```
+
+### Perintah Lainnya:
+- `git status` - Melihat status perubahan
+- `git pull` - Menarik perubahan dari GitHub
+- `git log` - Melihat riwayat commit
 
 ## <a name="more">🚀 More</a>
 

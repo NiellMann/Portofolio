@@ -1,0 +1,60 @@
+===========================================
+       TUTORIAL GIT PUSH KE GITHUB
+===========================================
+
+1. INISIALISASI GIT (jika belum ada)
+   git init
+
+2. TAMBAHKAN SEMUA FILE
+   git add .
+   # atau untuk file spesifik:
+   git add namafile.ext
+
+3. BUAT COMMIT
+   git commit -m "Pesan commit Anda"
+
+4. TAMBAHKAN REMOTE (jika belum ada)
+   git remote add origin https://github.com/username/repository.git
+
+5. PUSH KE GITHUB
+   git push -u origin main
+   # atau untuk branch lain:
+   git push -u origin namabranch
+
+===========================================
+       PERINTAH LAIN YANG Berguna
+===========================================
+
+- git status
+  # Melihat status perubahan file
+
+- git pull
+  # Menarik perubahan terbaru dari GitHub
+
+- git log
+  # Melihat riwayat commit
+
+- git branch
+  # Melihat daftar branch
+
+- git checkout -b nama-branch
+  # Membuat branch baru dan pindah
+
+- git checkout nama-branch
+  # Pindah ke branch lain
+
+- git merge nama-branch
+  # Menggabungkan branch ke branch aktif
+
+- git clone https://github.com/user/repo.git
+  # Menyalin repository dari GitHub
+
+===========================================
+       CARA MELAKUKAN PUSH SETELAH EDIT
+===========================================
+
+1. git add .
+2. git commit -m "Update deskripsi"
+3. git push
+
+===========================================
