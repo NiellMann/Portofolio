@@ -526,7 +526,7 @@ function App() {
                 <p className="meta">{pub.date} | {pub.role}</p>
                 <div className="item-links">
                   {pub.pdf && <a href={pub.pdf} target="_blank">View PDF</a>}
-                  {pub.link && <a href={pub.link} target="_blank">{pub.journal === 'Buku' ? 'Book Link' : 'Journal Link'}</a>}
+                  {pub.link && <a href={pub.link} target="_blank">{pub.journal.includes('ISBN') ? 'Book Link' : 'Journal Link'}</a>}
                   {pub.purchase && <a href={pub.purchase} target="_blank">Beli Buku</a>}
                 </div>
               </div>
