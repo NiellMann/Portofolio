@@ -153,7 +153,7 @@ function App() {
       title: 'Pengaruh Kenaikan PPN dan Inflasi Terhadap Volume Penjualan',
       journal: 'Dharma Ekonomi',
       date: 'Mei 2026',
-      link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/364',
+      link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/386',
       role: 'Co-Author'
     },
   ]
