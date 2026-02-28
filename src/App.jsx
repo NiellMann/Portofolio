@@ -143,6 +143,14 @@ function App() {
       role: 'Pencipta'
     },
     {
+      title: 'Buku Belajar Robotika Menggunakan Simulator Webots',
+      journal: 'ISBN : 9786340117189',
+      date: '2025',
+      link: 'https://sinta.kemdiktisaintek.go.id/departments/profile/384/8ED1D0CE-F122-4B37-A849-25F81B335395/0D263481-33FB-4FFE-BE55-52E20DF4924F/?view=books',
+      purchase: 'https://id.shp.ee/o9iLLET1',
+      role: 'Co-Author'
+    },
+    {
       title: 'Sistem Urban Portable Agriculture Berbasis IoT',
       journal: 'Jurnal Kolaboratif Sains',
       date: 'November 2025',
@@ -154,14 +162,6 @@ function App() {
       journal: 'Dharma Ekonomi',
       date: 'Mei 2026',
       link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/386',
-      role: 'Co-Author'
-    },
-    {
-      title: 'Buku Belajar Robotika Menggunakan Simulator Webots',
-      journal: 'ISBN : 9786340117189',
-      date: '2025',
-      link: 'https://sinta.kemdiktisaintek.go.id/departments/profile/384/8ED1D0CE-F122-4B37-A849-25F81B335395/0D263481-33FB-4FFE-BE55-52E20DF4924F/?view=books',
-      purchase: 'https://id.shp.ee/o9iLLET1',
       role: 'Co-Author'
     },
   ]
