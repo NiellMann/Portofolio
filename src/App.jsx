@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 function App() {
-  const [search, setSearch] = useState('')
   const [scrolled, setScrolled] = useState(false)
-  const [lang, setLang] = useState('en')
   const sectionRefs = useRef([])
   
   useEffect(() => {
@@ -303,25 +301,6 @@ function App() {
   
   const getColor = (index) => colors[index % colors.length]
 
-  const filterItems = (items, keys) => {
-    if (!search) return items
-    const q = search.toLowerCase()
-    return items.filter(item => keys.some(key => {
-      const val = item[key]
-      if (Array.isArray(val)) return val.some(v => String(v).toLowerCase().includes(q))
-      return String(val).toLowerCase().includes(q)
-    }))
-  }
-
-  const filteredExperience = filterItems(experience, ['title', 'company', 'date', 'duties'])
-  const filteredProjects = filterItems(projects, ['title', 'description', 'tech', 'event'])
-  const filteredPublications = filterItems(publications, ['title', 'journal', 'year'])
-  const filteredNews = filterItems(news, ['title', 'source', 'year'])
-  const filteredOrganizations = filterItems(organizations, ['title', 'organization', 'date'])
-  const filteredMilestones = search 
-    ? sortedMilestones.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.year.includes(search))
-    : sortedMilestones
-
   return (
     <>
       {/* Particle Background */}
@@ -351,28 +330,7 @@ function App() {
               <a href="#news">News</a>
             </nav>
           </div>
-          <div className="header-search">
-            <button 
-              className="translate-btn"
-              onClick={() => {
-                const isEnglish = lang === 'en'
-                setLang(isLanguage => isLanguage ? 'id' : 'en')
-                const select = document.querySelector('.goog-te-combo')
-                if (select) {
-                  select.value = isEnglish ? 'id' : 'en'
-                  select.dispatchEvent(new Event('change'))
-                }
-              }}
-              title={lang === 'en' ? 'Translate to Indonesian' : 'Translate to English'}
-            >
-              <svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor">
-                <path d="M8.212 1.055c-.268-.13-.576-.17-.893-.118-.224.036-.448.112-.632.263-.182.15-.297.34-.36.53-.06.19-.09.39-.09.59 0 .2.03.4.09.59.07.19.18.37.36.52.18.16.41.24.66.28.26.04.51.02.76-.06.24-.07.47-.18.68-.32.21-.14.4-.32.57-.53.03-.04.07-.08.1-.13-.2.12-.4.27-.59.44-.18.17-.35.36-.5.57-.15.2-.28.42-.39.65-.11.23-.19.47-.25.71-.06.24-.08.49-.08.73 0 .65.16 1.28.48 1.87.32.59.76 1.1 1.32 1.52.55.41 1.18.72 1.87.91.68.19 1.4.27 2.12.23.73-.04 1.43-.21 2.09-.51.66-.3 1.25-.71 1.74-1.23.5-.51.88-1.12 1.15-1.81.27-.69.41-1.43.41-2.21 0-.63-.1-1.24-.31-1.82-.2-.58-.5-1.1-.87-1.56l-.27-.33c.28-.23.51-.5.7-.79.19-.3.34-.62.46-.96.12-.34.19-.69.22-1.05.03-.36.01-.72-.05-1.08-.06-.36-.17-.71-.32-1.04-.15-.33-.35-.63-.58-.9-.24-.27-.51-.5-.82-.7-.31-.2-.64-.36-1-.47-.36-.11-.73-.18-1.12-.22-.39-.03-.78-.02-1.17.04z"/>
-                <path d="M8.026 3.025c.27 0 .54.04.8.12.26.08.5.2.72.36.22.16.41.36.57.59.16.23.28.49.37.77.08.28.13.57.13.87 0 .3-.05.59-.13.87-.09.28-.21.53-.37.77-.16.23-.35.43-.57.59-.22.16-.46.28-.72.36-.26.08-.53.12-.8.12-.27 0-.54-.04-.8-.12-.26-.08-.5-.2-.72-.36-.22-.16-.41-.36-.57-.59-.16-.23-.28-.49-.37-.77-.08-.28-.13-.57-.13-.87 0-.3.05-.59.13-.87.09-.28.21-.53.37-.77.16-.23.35-.43.57-.59.22-.16.46-.28.72-.36.26-.08.53-.12.8-.12z"/>
-                <path d="M8 4.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V7.5a.5.5 0 0 1-1 0V6.5H6a.5.5 0 0 1 0-1h1.5V5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M4 8c0-.34.03-.67.1-.99.07-.32.18-.62.33-.91.15-.29.34-.55.57-.78.23-.24.49-.42.78-.56.29-.14.6-.24.94-.29.34-.05.68-.05 1.02 0 .34.05.66.15.96.29.3.14.57.33.8.57.23.23.42.49.56.78.14.29.25.6.32.91.07.32.1.65.1.99s-.03.67-.1.99c-.07.32-.18.62-.33.91-.15.29-.34.55-.57.78-.23.24-.49.42-.78.56-.29.14-.6.24-.94.29-.34.05-.68.05-1.02 0-.34-.05-.66-.15-.96-.29-.3-.14-.57-.33-.8-.57-.23-.23-.42-.49-.56-.78-.14-.29-.25-.6-.32-.91-.07-.32-.1-.65-.1-.99z"/>
-              </svg>
-            </button>
-          </div>
+          <div className="header-left">
         </div>
       </header>
 
@@ -479,7 +437,7 @@ function App() {
             <h2 className="section-title">Experience</h2>
           </div>
           <div className="experience-list">
-            {filteredExperience.map((exp, i) => (
+            {experience.map((exp, i) => (
               <div key={i} className="experience-card">
                 <h3>{exp.title}</h3>
                 <p className="company">{exp.company}</p>
@@ -489,8 +447,6 @@ function App() {
                 </ul>
               </div>
             ))}
-            {filteredExperience.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
         </section>
@@ -501,7 +457,7 @@ function App() {
             <h2 className="section-title">Projects</h2>
           </div>
           <div className="repo-grid">
-            {filteredProjects.map((proj, i) => (
+            {projects.map((proj, i) => (
               <div key={i} className="repo-card">
                 <div className="repo-top">
                   <span className="repo-name">
@@ -517,8 +473,6 @@ function App() {
                 </div>
               </div>
             ))}
-            {filteredProjects.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
         </section>
@@ -529,7 +483,7 @@ function App() {
             <h2 className="section-title">Publications</h2>
           </div>
           <div className="publications-grid">
-            {filteredPublications.map((pub, i) => (
+            {publications.map((pub, i) => (
               <div key={i} className="publication-card">
                 <h3>{pub.title}</h3>
                 <p className="category">{pub.journal}</p>
@@ -541,8 +495,6 @@ function App() {
                 </div>
               </div>
             ))}
-            {filteredPublications.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
         </section>
@@ -553,7 +505,7 @@ function App() {
             <h2 className="section-title">News</h2>
           </div>
           <div className="news-grid">
-            {filteredNews.map((item, i) => (
+            {news.map((item, i) => (
               <div key={i} className="news-card">
                 <h3>{item.title}</h3>
                 <p className="category">{item.category}</p>
@@ -564,8 +516,6 @@ function App() {
                 </div>
               </div>
             ))}
-            {filteredNews.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
         </section>
@@ -591,15 +541,13 @@ function App() {
             <h2 className="section-title">Organizations</h2>
           </div>
           <div className="organizations-grid">
-            {filteredOrganizations.map((org, i) => (
+            {organizations.map((org, i) => (
               <div key={i} className="organization-card">
                 <h3>{org.title}</h3>
                 <p className="category">{org.organization}</p>
                 <p className="meta">{org.date}</p>
               </div>
             ))}
-            {filteredOrganizations.length === 0 && search && (
-              <p style={{ color: 'var(--text-muted)', padding: '16px' }}>No results found</p>
             )}
           </div>
         </section>
@@ -612,11 +560,11 @@ function App() {
           
           <div className="timeline-container">
             <div className="timeline-line"></div>
-            {[...filteredMilestones, ...filteredMilestones].map((m, i) => (
+            {[...sortedMilestones, ...sortedMilestones].map((m, i) => (
               <div 
                 key={i} 
                 className={`milestone-node milestone-${m.type} ${i % 2 === 0 ? 'above' : 'below'}`}
-                style={{ animationDelay: `${(i % filteredMilestones.length) * 0.1}s` }}
+                style={{ animationDelay: `${(i % sortedMilestones.length) * 0.1}s` }}
               >
                 <div className="milestone-card">
                   <div className="milestone-date">
