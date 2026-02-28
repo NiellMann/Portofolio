@@ -330,9 +330,8 @@ function App() {
               <a href="#news">News</a>
             </nav>
           </div>
-          <div className="header-left">
-        </div>
-      </header>
+          </div>
+        </header>
 
       <main>
         {/* Profile Header */}
