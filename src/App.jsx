@@ -156,7 +156,6 @@ function App() {
       link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/386',
       role: 'Co-Author'
     },
-<<<<<<< HEAD
     {
       title: 'Publikasi Buku',
       journal: 'Buku',
@@ -165,8 +164,6 @@ function App() {
       purchase: 'https://id.shp.ee/o9iLLET1',
       role: 'Author'
     },
-=======
->>>>>>> 587701baeb40101125570336b0bb4922edc07ee4
   ]
 
   const news = [
@@ -530,10 +527,7 @@ function App() {
                 <div className="item-links">
                   {pub.pdf && <a href={pub.pdf} target="_blank">View PDF</a>}
                   {pub.link && <a href={pub.link} target="_blank">Journal Link</a>}
-<<<<<<< HEAD
                   {pub.purchase && <a href={pub.purchase} target="_blank">Beli Buku</a>}
-=======
->>>>>>> 587701baeb40101125570336b0bb4922edc07ee4
                 </div>
               </div>
             ))}
