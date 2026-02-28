@@ -158,11 +158,11 @@ function App() {
     },
     {
       title: 'Buku Belajar Robotika Menggunakan Simulator Webots',
-      journal: 'Buku',
+      journal: 'ISBN : 9786340117189',
       date: '2026',
       link: 'https://sinta.kemdiktisaintek.go.id/departments/profile/384/8ED1D0CE-F122-4B37-A849-25F81B335395/0D263481-33FB-4FFE-BE55-52E20DF4924F/?view=books',
       purchase: 'https://id.shp.ee/o9iLLET1',
-      role: 'Author'
+      role: 'Co-Author'
     },
   ]
 
@@ -526,7 +526,7 @@ function App() {
                 <p className="meta">{pub.date} | {pub.role}</p>
                 <div className="item-links">
                   {pub.pdf && <a href={pub.pdf} target="_blank">View PDF</a>}
-                  {pub.link && <a href={pub.link} target="_blank">Journal Link</a>}
+                  {pub.link && <a href={pub.link} target="_blank">{pub.journal === 'Buku' ? 'Book Link' : 'Journal Link'}</a>}
                   {pub.purchase && <a href={pub.purchase} target="_blank">Beli Buku</a>}
                 </div>
               </div>
