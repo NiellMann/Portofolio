@@ -157,7 +157,7 @@ function App() {
       role: 'Co-Author'
     },
     {
-      title: 'Publikasi Buku',
+      title: 'Buku Belajar Robotika Menggunakan Simulator Webots',
       journal: 'Buku',
       date: '2026',
       link: 'https://sinta.kemdiktisaintek.go.id/departments/profile/384/8ED1D0CE-F122-4B37-A849-25F81B335395/0D263481-33FB-4FFE-BE55-52E20DF4924F/?view=books',
