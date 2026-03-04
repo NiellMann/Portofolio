@@ -110,13 +110,13 @@ function App() {
       tech: ['VTOL', 'UAV', 'Flight Control']
     },
     {
-      title: 'Urban Portable Agriculture (UPA) Berbasis IoT',
+      title: 'Urban Portable Agriculture (UPA) IoT-Based',
       desc: 'IoT-based vertical hydroponic farming system with pH and turbidity sensors, automatic LED control, and real-time dashboard. Technical validation shows pH sensor accuracy of ±0.1.',
       tech: ['ESP32', 'IoT', 'pH Sensor', 'DBSCAN'],
       link: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560'
     },
     {
-      title: 'My Heavy Equipment - Aplikasi IoT',
+      title: 'My Heavy Equipment - IoT Application',
       desc: 'IoT-based heavy equipment repair history information service. Registered with HKI under recording number 000535480.',
       tech: ['IoT', 'Heavy Equipment', 'Monitoring'],
       hki: 'EC002023102525'
@@ -135,31 +135,31 @@ function App() {
 
   const publications = [
     {
-      title: 'My Heavy Equipment: Layanan Informasi Riwayat Perbaikan Pada Alat Berat Berbasis IoT',
-      journal: 'Hak Kekayaan Intelektual (HKI)',
-      date: 'Oktober 2023',
+      title: 'My Heavy Equipment: IoT-Based Heavy Equipment Repair History Information Service',
+      journal: 'Intellectual Property Right (HKI)',
+      date: 'October 2023',
       pdf: '/Portofolio/referensi/HKI Aplikasi.pdf',
-      role: 'Pencipta'
+      role: 'Creator'
     },
     {
-      title: 'Buku Belajar Robotika Menggunakan Simulator Webots',
-      journal: 'ISBN : 9786340117189',
+      title: 'Learning Robotics Using Webots Simulator',
+      journal: 'ISBN: 9786340117189',
       date: '2025',
       link: 'https://sinta.kemdiktisaintek.go.id/departments/profile/384/8ED1D0CE-F122-4B37-A849-25F81B335395/0D263481-33FB-4FFE-BE55-52E20DF4924F/?view=books',
       purchase: 'https://id.shp.ee/o9iLLET1',
       role: 'Co-Author'
     },
     {
-      title: 'Sistem Urban Portable Agriculture Berbasis IoT',
-      journal: 'Jurnal Kolaboratif Sains',
+      title: 'IoT-Based Urban Portable Agriculture System',
+      journal: 'Journal of Collaborative Science',
       date: 'November 2025',
       link: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560',
       role: 'Co-Author'
     },
     {
-      title: 'Pengaruh Kenaikan PPN dan Inflasi Terhadap Volume Penjualan',
+      title: 'Impact of VAT Increase and Inflation on Sales Volume',
       journal: 'Dharma Ekonomi',
-      date: 'Mei 2026',
+      date: 'May 2026',
       link: 'https://ejournals.stiedharmaputra-smg.ac.id/index.php/DE/article/view/386',
       role: 'Co-Author'
     },
@@ -168,28 +168,28 @@ function App() {
   const news = [
     {
       title: 'Mine-Eye Gama - Astranauts 2024',
-      category: 'Prestasi Lomba',
+      category: 'Competition Achievement',
       links: [
         { text: 'UGM News', url: 'https://ugm.ac.id/en/news/mine-eye-gama-team-wins-2nd-place-in-astranauts-2024/' },
       ]
     },
     {
       title: 'My Heavy Equipment - IoT Application',
-      category: 'Inovasi Mahasiswa',
+      category: 'Student Innovation',
       links: [
         { text: 'UGM News', url: 'https://ugm.ac.id/en/news/ugm-students-develop-iot-integrated-heavy-equipment-service-history-recording-application/' },
       ]
     },
     {
       title: 'Edgytech Flathouse',
-      category: 'Inovasi Mahasiswa',
+      category: 'Student Innovation',
       links: [
         { text: 'UGM News', url: 'https://ugm.ac.id/id/berita/edgytech-flathouse-inovasi-untuk-optimalisasi-potensi-energi-rumah-susun/' },
       ]
     },
     {
-      title: 'KRTI - Kontes Robot Terbang Indonesia',
-      category: 'Prestasi Lomba',
+      title: 'KRTI - Indonesian Flying Robot Competition',
+      category: 'Competition Achievement',
       links: [
         { text: 'DTEDI SV UGM', url: 'https://tedi.sv.ugm.ac.id/id/2025/10/27/mahasiswa-dtedi-sekolah-vokasi-ugm-berprestasi-di-ajang-kontes-robot-terbang-indonesia-krti-2025/' },
       ]
@@ -203,10 +203,10 @@ function App() {
   }
 
   const awards = [
-    { title: 'Juara 1 Divisi Technology Development', event: 'KRTI (Kontes Robot Terbang Indonesia)' },
-    { title: 'Juara Harapan 1 SoTech', event: 'PT Pertamina Patra Niaga' },
-    { title: 'Juara 2 Astranauts 2024', event: 'PT Astra Digital Internasional' },
-    { title: 'Finalis PIMNAS 36', event: 'KEMENDIKBUDRISTEK' },
+    { title: '1st Place Technology Development Division', event: 'KRTI (Indonesian Flying Robot Competition)' },
+    { title: '1st Runner-up SoTech', event: 'PT Pertamina Patra Niaga' },
+    { title: '2nd Place Astranauts 2024', event: 'PT Astra Digital Internasional' },
+    { title: 'PIMNAS 36 Finalist', event: 'KEMENDIKBUDRISTEK' },
   ]
 
   const education = [
@@ -225,32 +225,32 @@ function App() {
   ]
 
   const milestones = [
-    { year: '2018', month: 7, title: 'SMKN 1 Tambelang - Mulai Pendidikan', type: 'education' },
-    { year: '2019', month: 6, title: 'Magang PT Dharma ControlCable - Quality Control', type: 'experience' },
-    { year: '2021', month: 5, title: 'Lulus SMKN 1 Tambelang', type: 'education' },
+    { year: '2018', month: 7, title: 'SMKN 1 Tambelang - Started Education', type: 'education' },
+    { year: '2019', month: 6, title: 'Internship at PT Dharma ControlCable - Quality Control', type: 'experience' },
+    { year: '2021', month: 5, title: 'Graduated from SMKN 1 Tambelang', type: 'education' },
     { year: '2021', month: 7, title: 'PT Prakarsa Alam Segar - Production Helper', type: 'experience' },
     { year: '2021', month: 10, title: 'PT Asatama Teknologi Terpadu - Network Engineer', type: 'experience' },
-    { year: '2022', month: 8, title: 'Masuk UGM - Teknologi Rekayasa Instrumentasi dan Kontrol', type: 'education' },
-    { year: '2022', month: 9, title: 'UKK CUP - Humasi & IT', type: 'organization' },
-    { year: '2023', month: 2, title: 'PMK Sekolah Vokasi - Koordinator Media', type: 'organization' },
+    { year: '2022', month: 8, title: 'UGM Admission - Instrumentation and Control Engineering Technology', type: 'education' },
+    { year: '2022', month: 9, title: 'UKK CUP - Public Relations & IT', type: 'organization' },
+    { year: '2023', month: 2, title: 'PMK Vocational School - Media Coordinator', type: 'organization' },
     { year: '2023', month: 3, title: 'ExcellencIA Learning Center - Video Editor', type: 'experience' },
     { year: '2023', month: 4, title: 'PKM VGK - Edgytech Flathouse', type: 'project' },
     { year: '2023', month: 5, title: 'Gelanggang Expo & UKK CUP - IT Staff', type: 'organization' },
     { year: '2023', month: 8, title: 'Robotik Academy - Student Trainee', type: 'experience' },
-    { year: '2023', month: 8, title: 'Dialog Lintas Agama UGM - Koordinator Media', type: 'organization' },
+    { year: '2023', month: 8, title: 'UGM Interfaith Dialogue - Media Coordinator', type: 'organization' },
     { year: '2023', month: 2, title: 'PKM KC - Monitoring Watch Cardiovascular', type: 'project' },
     { year: '2023', month: 12, title: 'GAMAFORCE - Electronic Engineer', type: 'experience' },
     { year: '2024', month: 1, title: 'OTS Petrokimia Gresik - HMI Engineer', type: 'project' },
     { year: '2024', month: 3, title: 'OTS Pupuk Kujang - HMI Engineer', type: 'project' },
-    { year: '2024', month: 8, title: 'Juara Harapan 1 SoTech 2024', type: 'award' },
-    { year: '2024', month: 8, title: 'Finalis PIMNAS 36', type: 'award' },
+    { year: '2024', month: 8, title: '1st Runner-up SoTech 2024', type: 'award' },
+    { year: '2024', month: 8, title: 'PIMNAS 36 Finalist', type: 'award' },
     { year: '2024', month: 9, title: 'Pusat Kajian LKFT UGM - Automation Engineer', type: 'experience' },
     { year: '2024', month: 10, title: 'My Heavy Equipment - HKI', type: 'project' },
-    { year: '2024', month: 10, title: 'Juara 2 Astranauts 2024', type: 'award' },
-    { year: '2024', month: 10, title: 'Juara 1 Divisi Technology Development - KRTI', type: 'award' },
+    { year: '2024', month: 10, title: '2nd Place Astranauts 2024', type: 'award' },
+    { year: '2024', month: 10, title: '1st Place Technology Development Division - KRTI', type: 'award' },
     { year: '2024', month: 12, title: 'GAMAFORCE - Head of Khageswara Division', type: 'experience' },
-    { year: '2025', month: 1, title: 'Urban Portable Agriculture - Publikasi Jurnal', type: 'publication' },
-    { year: '2026', month: 7, title: 'Lulus Universitas Gadjah Mada (Prediksi)', type: 'education' },
+    { year: '2025', month: 1, title: 'Urban Portable Agriculture - Journal Publication', type: 'publication' },
+    { year: '2026', month: 7, title: 'Graduation from Gadjah Mada University (Expected)', type: 'education' },
   ]
 
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -271,27 +271,27 @@ function App() {
 
   const organizations = [
     {
-      title: 'Koordinator Media',
-      organization: 'PMK Sekolah Vokasi',
-      date: 'Februari 2023 - Februari 2024',
+      title: 'Media Coordinator',
+      organization: 'PMK Vocational School',
+      date: 'February 2023 - February 2024',
     },
     {
       title: 'Media Staff',
-      organization: 'UKK (Unit Kerohanian Kristen)',
-      date: 'Februari 2023 - Februari 2024',
+      organization: 'UKK (Christian Student Union)',
+      date: 'February 2023 - February 2024',
     },
     {
-      title: 'Koordinator Media',
-      organization: 'Dialog Lintas Agama UGM',
-      date: 'Agustus 2023 - Oktober 2023',
+      title: 'Media Coordinator',
+      organization: 'UGM Interfaith Dialogue',
+      date: 'August 2023 - October 2023',
     },
     {
       title: 'IT Staff',
       organization: 'Gelanggang Expo & UKK CUP',
-      date: 'Mei 2023 - Agustus 2023',
+      date: 'May 2023 - August 2023',
     },
     {
-      title: 'Humas & IT',
+      title: 'Public Relations & IT',
       organization: 'UKK CUP',
       date: 'September 2022 - November 2023',
     },
@@ -369,19 +369,19 @@ function App() {
         <div className="tabs">
           <a href="#about" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-            Tentang Saya
+            About
           </a>
           <a href="#experience" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Zm8 0a.75.75 0 0 1 .75.75v2.75h2.75a.75.75 0 0 1 0 1.5h-2.75v2.75a.75.75 0 0 1-1.5 0v-2.75h-2.75a.75.75 0 0 1 0-1.5h2.75v-2.75A.75.75 0 0 1 9.5 8Z"></path></svg>
-            Pengalaman
+            Experience
           </a>
           <a href="#projects" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324l.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5V9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg>
-            Proyek
+            Projects
           </a>
           <a href="#publications" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25H14.25a.25.25 0 0 0 .25-.25Zm4.5.25a.25.25 0 0 0-.25.25v8.5a.25.25 0 0 0 .25.25h5.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25Z"></path></svg>
-            Publikasi
+            Publications
           </a>
         </div>
 
@@ -389,7 +389,7 @@ function App() {
         <section id="about" className="about-section">
             <h2>
               <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-              Tentang Saya
+              About Me
             </h2>
           <p>
             I am a final year student at Gadjah Mada University majoring in 
@@ -406,7 +406,7 @@ function App() {
           </p>
           
           <div style={{ marginTop: '24px' }}>
-            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Keterampilan Teknis</h3>
+            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Technical Skills</h3>
             <div className="skill-tags" style={{ marginBottom: '16px' }}>
               {skills.hard.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
             </div>
@@ -416,7 +416,7 @@ function App() {
         {/* Awards */}
         <section style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Penghargaan</h2>
+            <h2 className="section-title">Awards</h2>
           </div>
           <div className="education-grid">
             {education.map((edu, i) => (
@@ -433,7 +433,7 @@ function App() {
         {/* Experience */}
         <section id="experience" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Pengalaman</h2>
+            <h2 className="section-title">Experience</h2>
           </div>
           <div className="experience-list">
             {experience.map((exp, i) => (
@@ -452,7 +452,7 @@ function App() {
         {/* Projects */}
         <section id="projects" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Proyek</h2>
+            <h2 className="section-title">Projects</h2>
           </div>
           <div className="repo-grid">
             {projects.map((proj, i) => (
@@ -477,7 +477,7 @@ function App() {
         {/* Publications */}
         <section id="publications" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Publikasi</h2>
+            <h2 className="section-title">Publications</h2>
           </div>
           <div className="publications-grid">
             {publications.map((pub, i) => (
@@ -488,7 +488,7 @@ function App() {
                 <div className="item-links">
                   {pub.pdf && <a href={pub.pdf} target="_blank">View PDF</a>}
                   {pub.link && <a href={pub.link} target="_blank">{pub.journal.includes('ISBN') ? 'Book Link' : 'Journal Link'}</a>}
-                  {pub.purchase && <a href={pub.purchase} target="_blank">Beli Buku</a>}
+                  {pub.purchase && <a href={pub.purchase} target="_blank">Buy Book</a>}
                 </div>
               </div>
             ))}
@@ -498,7 +498,7 @@ function App() {
         {/* News */}
         <section id="news" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Berita</h2>
+            <h2 className="section-title">News</h2>
           </div>
           <div className="news-grid">
             {news.map((item, i) => (
@@ -533,7 +533,7 @@ function App() {
         {/* Organizations */}
         <section style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Organisasi</h2>
+            <h2 className="section-title">Organizations</h2>
           </div>
           <div className="organizations-grid">
             {organizations.map((org, i) => (
@@ -549,7 +549,7 @@ function App() {
         {/* Milestone - Horizontal Timeline */}
         <section id="milestone" className="milestone-section" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Linimasa Saya</h2>
+            <h2 className="section-title">My Timeline</h2>
           </div>
           
           <div className="timeline-container">
