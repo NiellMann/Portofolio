@@ -35,58 +35,58 @@ function App() {
     {
       title: 'Automation Engineer',
       company: 'Pusat Kajian LKFT UGM',
-      date: 'September 2024 - Sekarang',
+      date: 'September 2024 - Present',
       duties: [
-        'Membuat HMI OTS untuk proses produksi Asam Phosfat (PT. Petrokimia Gresik Production 3B)',
-        'Membuat HMI OTS untuk proses produksi Ammonia (PT. Pupuk Kujang Production 3A)',
-        'Berperan sebagai pemimpin proyek digitalisasi sistem pelatihan operator',
+        'Developed HMI OTS for Phosphoric Acid production process (PT. Petrokimia Gresik Production 3B)',
+        'Developed HMI OTS for Ammonia production process (PT. Pupuk Kujang Production 3A)',
+        'Led the digitization project of operator training systems',
       ]
     },
     {
       title: 'Head of Khageswara Technology Development',
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
-      date: 'Desember 2024 - Desember 2025',
+      date: 'December 2024 - December 2025',
       duties: [
-        'Memimpin pengembangan sistem elektronik dan kontrol pesawat VTOL Plane Quadcopter',
-        'Mengatur integrasi mekatronika dan jadwal teknis tim divisi Technology Development',
-        'Bertanggung jawab atas arah teknis dan pencapaian performa UAV dalam kompetisi KRTI',
+        'Led the development of electronic and control systems for VTOL Plane Quadcopter',
+        'Managed mechatronics integration and technical scheduling for Technology Development division',
+        'Responsible for technical direction and UAV performance achievement in KRTI competitions',
       ]
     },
     {
       title: 'Electronic Engineer',
       company: 'GAMAFORCE - Gadjah Mada Flying Object Research Center',
-      date: 'Desember 2023 - Desember 2024',
+      date: 'December 2023 - December 2024',
       duties: [
-        'Wiring komponen elektronik untuk Fly-wing dan Fixed-wing',
-        'Merancang konsep mekatronika untuk mekanisme sayap lipat',
-        'Mendukung pengembangan teknologi pesawat melalui desain dan integrasi elektronik',
+        'Wired electronic components for Fly-wing and Fixed-wing',
+        'Designed mechatronics concepts for foldable wing mechanisms',
+        'Supported aircraft technology development through electronic design and integration',
       ]
     },
     {
       title: 'Student Trainee & Media Social Designer',
       company: 'Robotik Academy',
-      date: 'Agustus 2023 - Januari 2024',
+      date: 'August 2023 - January 2024',
       duties: [
-        'Mengelola Instagram resmi dan mengajar Scratch dan Tinkercad',
-        'Menggabungkan kreativitas digital dengan pengajaran dasar pemrograman anak',
+        'Managed official Instagram and taught Scratch and Tinkercad',
+        'Combined digital creativity with basic programming education for children',
       ]
     },
     {
       title: 'Network Engineer',
       company: 'PT Asatama Teknologi Terpadu',
-      date: 'Oktober 2021 - Desember 2021',
+      date: 'October 2021 - December 2021',
       duties: [
-        'Troubleshooting perangkat, topologi jaringan, instalasi dan konfigurasi Mikrotik',
-        'Mendukung operasional jaringan dan perangkat di bidang layanan IT dan komunikasi',
+        'Device troubleshooting, network topology, Mikrotik installation and configuration',
+        'Supported network and device operations in IT and communication services',
       ]
     },
     {
       title: 'Production Helper',
       company: 'PT Prakarsa Alam Segar (Mie Sedaap)',
-      date: 'Juli 2021 - Oktober 2021',
+      date: 'July 2021 - October 2021',
       duties: [
-        'Menyiapkan instalasi, konfigurasi dan penyesuaian ke produksi mesin di line conditioning 2 produk mie kering',
-        'Setup dan pengecekan wiring panel dan mesin produksi',
+        'Prepared installation, configuration and adjustment for production machines in conditioning line 2 for dry noodle products',
+        'Set up and checked wiring panels and production machines',
       ]
     },
   ]
@@ -94,41 +94,41 @@ function App() {
   const projects = [
     {
       title: 'OTS Petrokimia Gresik - PKG',
-      desc: 'Operator Training Simulator (OTS) adalah sistem simulasi untuk melatih operator dalam mengoperasikan proses produksi Asam Phosfat. Dibuat menggunakan HMI dengan antarmuka yang realistis.',
-      tech: ['OTS', 'HMI', 'Asam Phosfat', 'Industrial Automation'],
+      desc: 'Operator Training Simulator (OTS) is a simulation system to train operators in operating the Phosphoric Acid production process. Built using HMI with realistic interfaces.',
+      tech: ['OTS', 'HMI', 'Phosphoric Acid', 'Industrial Automation'],
       link: ''
     },
     {
       title: 'OTS Pupuk Kujang - PKC',
-      desc: 'Operator Training Simulator (OTS) adalah sistem simulasi untuk melatih operator dalam mengoperasikan proses produksi Ammonia. Dibuat menggunakan HMI dengan antarmuka yang realistis.',
+      desc: 'Operator Training Simulator (OTS) is a simulation system to train operators in operating the Ammonia production process. Built using HMI with realistic interfaces.',
       tech: ['OTS', 'HMI', 'Ammonia', 'Industrial Automation'],
       link: ''
     },
     {
       title: 'VTOL Plane Quadcopter',
-      desc: 'Pengembangan sistem elektronik dan kontrol pesawat VTOL Plane Quadcopter untuk kompetisi KRTI.',
+      desc: 'Development of electronic and control systems for VTOL Plane Quadcopter for KRTI competition.',
       tech: ['VTOL', 'UAV', 'Flight Control']
     },
     {
       title: 'Urban Portable Agriculture (UPA) Berbasis IoT',
-      desc: 'Sistem pertanian hidroponik vertikal berbasis IoT dengan sensor pH dan kekeruhan, kontrol LED otomatis, dan dashboard real-time. Validasi teknis menunjukkan akurasi sensor pH ±0.1.',
-      tech: ['ESP32', 'IoT', 'Sensor pH', 'DBSCAN'],
+      desc: 'IoT-based vertical hydroponic farming system with pH and turbidity sensors, automatic LED control, and real-time dashboard. Technical validation shows pH sensor accuracy of ±0.1.',
+      tech: ['ESP32', 'IoT', 'pH Sensor', 'DBSCAN'],
       link: 'https://jurnal.unismuhpalu.ac.id/index.php/JKS/article/view/8560'
     },
     {
       title: 'My Heavy Equipment - Aplikasi IoT',
-      desc: 'Layanan informasi riwayat perbaikan pada alat berat berbasis Internet of Things. Terdaftar di HKI dengan nomor pencatatan 000535480.',
+      desc: 'IoT-based heavy equipment repair history information service. Registered with HKI under recording number 000535480.',
       tech: ['IoT', 'Heavy Equipment', 'Monitoring'],
       hki: 'EC002023102525'
     },
     {
       title: 'Monitoring Watch Cardiovascular - PKM KC',
-      desc: 'Desain PCB dengan KiCAD 8.0 dan pengujian sensor detak jantung. Merancang prototipe wearable kesehatan untuk penderita kardiovaskular.',
-      tech: ['KiCAD', 'Sensor ECG', 'Embedded System']
+      desc: 'PCB design with KiCAD 8.0 and heart rate sensor testing. Designed health wearable prototype for cardiovascular patients.',
+      tech: ['KiCAD', 'ECG Sensor', 'Embedded System']
     },
     {
       title: 'Edgytech Flathouse - PKM VGK',
-      desc: 'Sistem monitoring energi terbarukan untuk rumah susun dengan penelitian pemanfaatan energi alternatif pada hunian vertikal ramah lingkungan.',
+      desc: 'Renewable energy monitoring system for apartments with research on alternative energy utilization in environmentally friendly vertical housing.',
       tech: ['Renewable Energy', 'Smart Grid', 'Monitoring']
     },
   ]
@@ -198,8 +198,8 @@ function App() {
 
   const skills = {
     hard: ['AVEVA Intouch', 'KiCAD', 'Fusion360', 'Arduino', 'ESP32', 'MATLAB', 'Python', 'C/C++', 'Figma'],
-    software: ['Labview', 'Microsoft Office'],
-    soft: ['Kepemimpinan', 'Problem Solving', 'Adaptasi Cepat', 'Komunikasi Efektif', 'Kolaborasi Tim']
+    software: ['LabVIEW', 'Microsoft Office'],
+    soft: ['Leadership', 'Problem Solving', 'Fast Adaptation', 'Effective Communication', 'Team Collaboration']
   }
 
   const awards = [
@@ -212,13 +212,13 @@ function App() {
   const education = [
     {
       school: 'Universitas Gadjah Mada',
-      degree: 'Teknologi Rekayasa Instrumentasi dan Kontrol',
-      year: '2022 - Sekarang',
+      degree: 'Instrumentation and Control Engineering Technology',
+      year: '2022 - Present',
       gpa: 'GPA: 3.77 / 4.00'
     },
     {
       school: 'SMKN 1 Tambelang, Bekasi',
-      degree: 'Teknik Komputer dan Jaringan',
+      degree: 'Computer and Network Engineering',
       year: '2018 - 2021',
       gpa: 'GPA: 82.6 / 100.0'
     },
@@ -369,19 +369,19 @@ function App() {
         <div className="tabs">
           <a href="#about" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-            About
+            Tentang Saya
           </a>
           <a href="#experience" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Zm8 0a.75.75 0 0 1 .75.75v2.75h2.75a.75.75 0 0 1 0 1.5h-2.75v2.75a.75.75 0 0 1-1.5 0v-2.75h-2.75a.75.75 0 0 1 0-1.5h2.75v-2.75A.75.75 0 0 1 9.5 8Z"></path></svg>
-            Experience
+            Pengalaman
           </a>
           <a href="#projects" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324l.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5V9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg>
-            Projects
+            Proyek
           </a>
           <a href="#publications" className="tab">
             <svg height="16" viewBox="0 0 16 16" width="16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25H14.25a.25.25 0 0 0 .25-.25Zm4.5.25a.25.25 0 0 0-.25.25v8.5a.25.25 0 0 0 .25.25h5.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25Z"></path></svg>
-            Publications
+            Publikasi
           </a>
         </div>
 
@@ -389,34 +389,34 @@ function App() {
         <section id="about" className="about-section">
             <h2>
               <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path></svg>
-              About Me
+              Tentang Saya
             </h2>
           <p>
-            Saya adalah mahasiswa tingkat akhir di Universitas Gadjah Mada Program Studi 
-            Teknologi Rekayasa Instrumentasi dan Kontrol dengan GPA 3.77/4.00. 
-            Saya memiliki minat besar di bidang otomasi industri, sistem kontrol, 
-            dan teknologi UAV (Unmanned Aerial Vehicle).
+            I am a final year student at Gadjah Mada University majoring in 
+            Instrumentation and Control Engineering Technology with a GPA of 3.77/4.00. 
+            I have a strong interest in industrial automation, control systems, 
+            and UAV (Unmanned Aerial Vehicle) technology.
           </p>
           <p>
-            Dengan pengalaman berbagai proyek industri dan kompetisi tingkat nasional, 
-            saya telah mengembangkan keahlian dalam perancangan sistem elektronik, 
-            pemrograman mikrokontroller, serta desain HMI untuk simulasi pelatihan operator. 
-            Saya aktif berpartisipasi dalam organisasi kemahasiswaan dan telah 
-            memperoleh prestasi di berbagai event.
+            With experience in various industrial projects and national competitions, 
+            I have developed expertise in electronic system design, 
+            microcontroller programming, and HMI design for operator training simulations. 
+            I actively participate in student organizations and have 
+            achieved achievements in various events.
           </p>
           
           <div style={{ marginTop: '24px' }}>
-            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Technical Skills</h3>
+            <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '12px' }}>Keterampilan Teknis</h3>
             <div className="skill-tags" style={{ marginBottom: '16px' }}>
               {skills.hard.map((s, i) => <span key={i} className="skill-tag">{s}</span>)}
             </div>
           </div>
         </section>
 
-        {/* Education */}
+        {/* Awards */}
         <section style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Education</h2>
+            <h2 className="section-title">Penghargaan</h2>
           </div>
           <div className="education-grid">
             {education.map((edu, i) => (
@@ -433,7 +433,7 @@ function App() {
         {/* Experience */}
         <section id="experience" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Experience</h2>
+            <h2 className="section-title">Pengalaman</h2>
           </div>
           <div className="experience-list">
             {experience.map((exp, i) => (
@@ -452,7 +452,7 @@ function App() {
         {/* Projects */}
         <section id="projects" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Projects</h2>
+            <h2 className="section-title">Proyek</h2>
           </div>
           <div className="repo-grid">
             {projects.map((proj, i) => (
@@ -477,7 +477,7 @@ function App() {
         {/* Publications */}
         <section id="publications" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Publications</h2>
+            <h2 className="section-title">Publikasi</h2>
           </div>
           <div className="publications-grid">
             {publications.map((pub, i) => (
@@ -498,7 +498,7 @@ function App() {
         {/* News */}
         <section id="news" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">News</h2>
+            <h2 className="section-title">Berita</h2>
           </div>
           <div className="news-grid">
             {news.map((item, i) => (
@@ -533,7 +533,7 @@ function App() {
         {/* Organizations */}
         <section style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">Organizations</h2>
+            <h2 className="section-title">Organisasi</h2>
           </div>
           <div className="organizations-grid">
             {organizations.map((org, i) => (
@@ -549,7 +549,7 @@ function App() {
         {/* Milestone - Horizontal Timeline */}
         <section id="milestone" className="milestone-section" style={{ marginTop: '32px' }}>
           <div className="section-header">
-            <h2 className="section-title">My Timeline</h2>
+            <h2 className="section-title">Linimasa Saya</h2>
           </div>
           
           <div className="timeline-container">
