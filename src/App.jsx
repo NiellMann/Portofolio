@@ -446,7 +446,6 @@ function App() {
                 </ul>
               </div>
             ))}
-            )}
           </div>
         </section>
 
@@ -472,7 +471,6 @@ function App() {
                 </div>
               </div>
             ))}
-            )}
           </div>
         </section>
 
@@ -494,7 +492,6 @@ function App() {
                 </div>
               </div>
             ))}
-            )}
           </div>
         </section>
 
@@ -515,7 +512,6 @@ function App() {
                 </div>
               </div>
             ))}
-            )}
           </div>
         </section>
 
@@ -547,7 +543,6 @@ function App() {
                 <p className="meta">{org.date}</p>
               </div>
             ))}
-            )}
           </div>
         </section>
 
