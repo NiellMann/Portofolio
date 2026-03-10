@@ -39,7 +39,7 @@ function App() {
       duties: [
         'Developed HMI OTS for Phosphoric Acid production process (PT. Petrokimia Gresik Production 3B)',
         'Developed HMI OTS for Ammonia production process (PT. Pupuk Kujang Production 3A)',
-        'Led the digitization project of operator training systems',
+        'Collaborated with a team to digitize the operator training system.',
       ]
     },
     {
