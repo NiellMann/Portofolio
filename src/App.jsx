@@ -38,7 +38,7 @@ function App() {
       date: 'September 2024 - Present',
       duties: [
         'Developed HMI OTS for Phosphoric Acid production process (PT. Petrokimia Gresik Production 3B)',
-        'Developed HMI OTS for Ammonia production process (PT. Pupuk Kujang Production 3A)',
+        'Developed HMI OTS for Ammonia production process (PT. Pupuk Kujang Production 1B)',
         'Collaborated with a team to digitize the operator training system.',
       ]
     },
